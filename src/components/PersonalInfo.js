@@ -22,7 +22,7 @@ class PersonalInfo extends Component {
     };
 
     render() {
-        const { firstName, lastName, major, year, phone, email, linkedin, github } = this.state;
+        const { firstName, lastName, major, yearLevel, phone, email, linkedin, github } = this.state;
 
         return (
             <div>
@@ -50,9 +50,9 @@ class PersonalInfo extends Component {
                 />
                 <input
                     type="text"
-                    name="year"
-                    placeholder="Year"
-                    value={year}
+                    name="yearLevel"
+                    placeholder="Year level"
+                    value={yearLevel}
                     onChange={this.handleChange}
                 />
                 <input
