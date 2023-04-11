@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from "react";
 import PersonalInfo from "./components/PersonalInfo"
+import WorkExperience from "./components/WorkExperience";
 
 
 class App extends Component{
@@ -12,6 +13,7 @@ class App extends Component{
       <div>
         <h1>Resume Builder</h1>
         <PersonalInfo />
+        <WorkExperience />
       </div>
     );
   }
