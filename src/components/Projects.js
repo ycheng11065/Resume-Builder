@@ -22,6 +22,7 @@ class Projects extends Component {
 
         return (
             <div>
+                <h2>Projects</h2>
                 <input
                     type="text"
                     name="name"
@@ -49,4 +50,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects
+export default Projects;

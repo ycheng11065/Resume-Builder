@@ -4,6 +4,7 @@ import PersonalInfo from "./components/PersonalInfo";
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 
 class App extends Component{
@@ -18,6 +19,7 @@ class App extends Component{
         <Education />
         <WorkExperience />
         <Projects />
+        <Skills />
       </div>
     );
   }

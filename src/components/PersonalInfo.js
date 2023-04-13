@@ -88,5 +88,5 @@ class PersonalInfo extends Component {
     }
 }
 
-export default PersonalInfo
+export default PersonalInfo;
 

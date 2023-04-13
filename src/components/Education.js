@@ -22,6 +22,7 @@ class Education extends Component {
 
         return (
             <div>
+                <h2>Education</h2>
                 <input
                     type="text"
                     name="university"
@@ -55,4 +56,4 @@ class Education extends Component {
     }
 }
 
-export default Education
+export default Education;

@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
 class WorkExperience extends Component {
     constructor() {
@@ -24,6 +24,7 @@ class WorkExperience extends Component {
 
         return (
             <div>
+                <h2>Work Experiences</h2>
                 <input
                     type="text"
                     name="position"
@@ -72,4 +73,4 @@ class WorkExperience extends Component {
     }
 }
 
-export default WorkExperience
+export default WorkExperience;
