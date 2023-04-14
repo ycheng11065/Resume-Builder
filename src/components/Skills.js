@@ -8,6 +8,7 @@ class Skills extends Component {
             category: "",
             skill: "",
             skills: {},
+            inputValues: {},
         };
     }
 
@@ -15,8 +16,10 @@ class Skills extends Component {
         this.setState({ category: e.target.value });
     };
 
-    handleSkillChange = (e) => {
-        this.setState({ skill: e.target.value });
+    handleSkillChange = (category) => (e) => {
+        this.setState({ 
+            inputValues: { ...this.inputValues, [category]: e.target.value },
+        });
     };
 
     addCategory = () => {
@@ -26,26 +29,32 @@ class Skills extends Component {
             this.setState({
                 skills: { ...skills, [category]: [] },
                 category: "",
+                intpuValues: { ...this.state.inputValues, [category]: "" },
             });
         }
     };
 
-    addSkill = () => {
-        const { category, skill, skills } = this.state;
+    addSkill = (e, category) => {
+        const { skills, inputValues } = this.state;
 
-        if (category && skill && skills[category]) {
+        if (category && inputValues[category] && skills[category]) {
             this.setState({
-                skills: { ...skills, [category]: [...skills[category], skill] },
+                skills: {
+                    ...skills, 
+                    [category]: [...skills[category], inputValues[category]], 
+                },
                 skill: "",
+                inputValues: { ...inputValues, [category]: ""},
             });
         }
     };
 
     render() {
-        const { category, skill, skills } = this.state;
+        const { category, skills, inputValues } = this.state;
 
         return (
             <div>
+                <h2>Skills</h2>
                 <input
                     type="text"
                     name="category"
@@ -54,14 +63,6 @@ class Skills extends Component {
                     onChange={this.handleCategoryChange}
                 />
                 <button onClick={this.addCategory}>Add Category</button>
-                <input
-                    type="text"
-                    name="skill"
-                    placeholder="Skill"
-                    value={skill}
-                    OnChange={this.handleSkillChange}
-                />
-                <button onClick={this.addSkill}>Add Skill</button>
                 {Object.entries(skills).map(([category, skills]) => (
                     <div key={category}>
                         <h3>{category}</h3>
@@ -70,6 +71,14 @@ class Skills extends Component {
                                 <li key={`${skill}-${index}`}>{skill}</li>
                             ))}
                         </ul>
+                        <input
+                            type="text"
+                            name="skill"
+                            placeholder="Skill"
+                            value={inputValues[category] || ""}
+                            onChange={this.handleSkillChange(category)}
+                        />
+                        <button onClick={(e) => this.addSkill(e, category)}>Add Skill</button>
                     </div>
                 ))}
             </div>
