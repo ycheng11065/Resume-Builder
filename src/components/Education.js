@@ -5,6 +5,8 @@ class Education extends Component {
     super();
 
     this.state = {
+      education: [],  
+      inputValues: {},
       university: "",
       degree: "",
       startDate: "",
@@ -17,12 +19,25 @@ class Education extends Component {
     this.setState({ [name]: value });
   };
 
+  addEducation = () => {
+    const { education, university } = this.state;
+
+    this.setState({
+        education: [ ...education, university],
+        university: "",
+        degree: "",
+        startDate: "",
+        endDate: "",
+    });
+  }
+
   render() {
-    const { university, degree, startDate, endDate } = this.state;
+    const { education, university, degree, startDate, endDate } = this.state;
 
     return (
       <div>
         <h2>Education</h2>
+        {Object.entries(education).map()}
         <input
           type="text"
           name="university"
