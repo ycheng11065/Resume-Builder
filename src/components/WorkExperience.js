@@ -93,7 +93,7 @@ class WorkExperience extends Component {
               placeholder="Description"
               value={inputValues[workId]["description"]}
               onChange={this.handleChange(workId)}
-              row="4"
+              rows="4"
               cols="50"
             />
           </div>
