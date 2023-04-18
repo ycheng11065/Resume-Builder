@@ -7,65 +7,81 @@ class Education extends Component {
     this.state = {
       education: [],  
       inputValues: {},
-      university: "",
-      degree: "",
-      startDate: "",
-      endDate: "",
     };
   }
 
-  handleChange = (e) => {
+  handleChange = (school) => (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
+
+    this.setState({
+      inputValues: { 
+        ...this.state.inputValues,
+        [school]: {
+          ...this.state.inputValues[school],
+          [name]: value,
+        },
+      },
+    });
   };
 
   addEducation = () => {
-    const { education, university } = this.state;
+    const { education, inputValues } = this.state;
+    const educationElementCount = education.length;
+    const schoolId = `School-${educationElementCount + 1}`;
 
     this.setState({
-        education: [ ...education, university],
-        university: "",
-        degree: "",
-        startDate: "",
-        endDate: "",
+        education: [ ...education, schoolId],
+        inputValues: { 
+          ...inputValues, 
+          [schoolId]: {
+            schoolName: "",
+            degree: "",
+            startDate: "",
+            endDate: "",
+          }
+        }
     });
-  }
+  };
 
   render() {
-    const { education, university, degree, startDate, endDate } = this.state;
+    const { education, inputValues } = this.state;
 
     return (
       <div>
         <h2>Education</h2>
-        {Object.entries(education).map()}
-        <input
-          type="text"
-          name="university"
-          placeholder="University"
-          value={university}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="degree"
-          placeholder="Degree"
-          value={degree}
-          onChange={this.handleChange}
-        />
-        <input
-          type="date"
-          name="startDate"
-          placeholder="Start date"
-          value={startDate}
-          onChange={this.handleChange}
-        />
-        <input
-          type="date"
-          name="endDate"
-          placeholder="End Date"
-          value={endDate}
-          onChange={this.handleChange}
-        />
+        <button onClick={this.addEducation}>Add Education</button>
+        {education.map((schoolId) => (
+          <div key={schoolId}>
+             <input
+              type="text"
+              name="schoolName"
+              placeholder="School Name"
+              value={inputValues[schoolId]["schoolName"]}
+              onChange={this.handleChange(schoolId)}
+            />
+            <input
+              type="text"
+              name="degree"
+              placeholder="Degree"
+              value={inputValues[schoolId]["degree"]}
+              onChange={this.handleChange(schoolId)}
+            />
+            <input
+              type="date"
+              name="startDate"
+              placeholder="Start date"
+              value={inputValues[schoolId]["startDate"]}
+              onChange={this.handleChange(schoolId)}
+            />
+            <input
+              type="date"
+              name="endDate"
+              placeholder="End Date"
+              value={inputValues[schoolId]["endDate"]}
+              onChange={this.handleChange(schoolId)}
+            />
+          </div>
+        ))}
       </div>
     );
   }
