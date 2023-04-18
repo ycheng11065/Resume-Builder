@@ -42,7 +42,7 @@ class Skills extends Component {
       this.setState({
         skills: {
           ...skills,
-          [category]: { ...skills[category], [skillId]:inputValues[category] },
+          [category]: { ...skills[category], [skillId]: inputValues[category] },
         },
         inputValues: { ...inputValues, [category]: "" },
       });
@@ -79,32 +79,32 @@ class Skills extends Component {
   };
 
   renderInput(skills, inputValues) {
-    return (
-      Object.entries(skills).map(([category, skills]) => (
-        <div key={category}>
-          <h3>{category}</h3>
-          <button onClick={() => this.handleDeleteCategory(category)}>Delete Category</button>
-          <ul>
-            {Object.entries(skills).map(([skillId, skill]) => (
-              <div key={skillId}> 
-                <li>{skill}</li>
-                <button onClick={() => this.handleDeleteSkill(category, skillId)}>Delete Skill</button>
-              </div>
-            ))}
-          </ul>
-          <input
-            type="text"
-            name="skill"
-            placeholder="Skill"
-            value={inputValues[category] || ""}
-            onChange={this.handleSkillChange(category)}
-          />
-          <button onClick={() => this.addSkill(category)}>
-            Add Skill
-          </button>
-        </div>
-      )) 
-    );
+    return Object.entries(skills).map(([category, skills]) => (
+      <div key={category}>
+        <h3>{category}</h3>
+        <button onClick={() => this.handleDeleteCategory(category)}>
+          Delete Category
+        </button>
+        <ul>
+          {Object.entries(skills).map(([skillId, skill]) => (
+            <div key={skillId}>
+              <li>{skill}</li>
+              <button onClick={() => this.handleDeleteSkill(category, skillId)}>
+                Delete Skill
+              </button>
+            </div>
+          ))}
+        </ul>
+        <input
+          type="text"
+          name="skill"
+          placeholder="Skill"
+          value={inputValues[category] || ""}
+          onChange={this.handleSkillChange(category)}
+        />
+        <button onClick={() => this.addSkill(category)}>Add Skill</button>
+      </div>
+    ));
   }
 
   render() {

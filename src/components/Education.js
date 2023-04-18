@@ -15,18 +15,15 @@ class Education extends DynamicComponents {
     });
   }
 
-  
-
   renderInputs(schoolId, inputValues, handleChange) {
-
     return (
       <div>
         <input
-        type="text"
-        name="schoolName"
-        placeholder="School Name"
-        value={inputValues[schoolId]["schoolName"]}
-        onChange={handleChange}
+          type="text"
+          name="schoolName"
+          placeholder="School Name"
+          value={inputValues[schoolId]["schoolName"]}
+          onChange={handleChange}
         />
         <input
           type="text"
