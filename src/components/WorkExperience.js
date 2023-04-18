@@ -45,56 +45,60 @@ class WorkExperience extends Component {
   };
 
   render() {
-    const { position, company, startDate, endDate, location, description } =
-      this.state;
+    const { workExperience, inputValues } = this.state;
 
     return (
       <div>
         <h2>Work Experiences</h2>
-        <button>Add Work Experience</button>
-        <input
-          type="text"
-          name="position"
-          placeholder="Position"
-          value={position}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="company"
-          placeholder="Company"
-          value={company}
-          onChange={this.handleChange}
-        />
-        <input
-          type="date"
-          name="startDate"
-          placeholder="Start date"
-          value={startDate}
-          onChange={this.handleChange}
-        />
-        <input
-          type="date"
-          name="endDate"
-          placeholder="End date"
-          value={endDate}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="location"
-          placeholder="Location"
-          value={location}
-          onChange={this.handleChange}
-        />
-        <textarea
-          name="description"
-          placeholder="Description"
-          value={description}
-          onChange={this.handleChange}
-          row="4"
-          cols="50"
-        />
+        <button onClick={this.addWorkExperience}>Add Work Experience</button>
+        {workExperience.map(work => (
+          <div>
+            <input
+              type="text"
+              name="position"
+              placeholder="Position"
+              value={position}
+              onChange={this.handleChange}
+            />
+            <input
+              type="text"
+              name="company"
+              placeholder="Company"
+              value={company}
+              onChange={this.handleChange}
+            />
+            <input
+              type="date"
+              name="startDate"
+              placeholder="Start date"
+              value={startDate}
+              onChange={this.handleChange}
+            />
+            <input
+              type="date"
+              name="endDate"
+              placeholder="End date"
+              value={endDate}
+              onChange={this.handleChange}
+            />
+            <input
+              type="text"
+              name="location"
+              placeholder="Location"
+              value={location}
+              onChange={this.handleChange}
+            />
+            <textarea
+              name="description"
+              placeholder="Description"
+              value={description}
+              onChange={this.handleChange}
+              row="4"
+              cols="50"
+            />
+          </div>
+        ))  
+        }
       </div>
     );
   }
