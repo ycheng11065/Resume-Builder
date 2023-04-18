@@ -51,48 +51,48 @@ class WorkExperience extends Component {
       <div>
         <h2>Work Experiences</h2>
         <button onClick={this.addWorkExperience}>Add Work Experience</button>
-        {workExperience.map(work => (
-          <div>
+        {workExperience.map(workId => (
+          <div key={workId}>
             <input
               type="text"
               name="position"
               placeholder="Position"
-              value={position}
-              onChange={this.handleChange}
+              value={inputValues[workId]["position"]}
+              onChange={this.handleChange(workId)}
             />
             <input
               type="text"
               name="company"
               placeholder="Company"
-              value={company}
-              onChange={this.handleChange}
+              value={inputValues[workId]["company"]}
+              onChange={this.handleChange(workId)}
             />
             <input
               type="date"
               name="startDate"
               placeholder="Start date"
-              value={startDate}
-              onChange={this.handleChange}
+              value={inputValues[workId]["startDate"]}
+              onChange={this.handleChange(workId)}
             />
             <input
               type="date"
               name="endDate"
               placeholder="End date"
-              value={endDate}
-              onChange={this.handleChange}
+              value={inputValues[workId]["endDate"]}
+              onChange={this.handleChange(workId)}
             />
             <input
               type="text"
               name="location"
               placeholder="Location"
-              value={location}
-              onChange={this.handleChange}
+              value={inputValues[workId]["location"]}
+              onChange={this.handleChange(workId)}
             />
             <textarea
               name="description"
               placeholder="Description"
-              value={description}
-              onChange={this.handleChange}
+              value={inputValues[workId]["description"]}
+              onChange={this.handleChange(workId)}
               row="4"
               cols="50"
             />
