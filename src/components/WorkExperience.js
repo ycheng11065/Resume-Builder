@@ -7,28 +7,42 @@ class WorkExperience extends Component {
     this.state = {
       workExperience: [],
       inputValues: {},
-      position: "",
-      company: "",
-      startDate: "",
-      endDate: "",
-      location: "",
-      description: "",
     };
   }
 
   handleChange = (workId) => (e) => {
-    const { inputValues, name, value } = e.target;
+    const { name, value } = e.target;
     this.setState({ 
       inputValues: {
-        ...inputValues,
+        ...this.state.inputValues,
         [workId]: {
-          ...inputValues[workId],
+          ...this.state.inputValues[workId],
           [name]: value,
         },
       },  
     });
   };
 
+  addWorkExperience = () => {
+    const { inputValues, workExperience } = this.state;
+    const workExperienceAmount = workExperience.length;
+    const workId = `Work-${workExperienceAmount + 1}`;
+
+    this.setState({
+      workExperience: [ ...workExperience, workId ],
+      inputValues: {
+        ...inputValues,
+        [workId]: {
+          position: "",
+          company: "",
+          startDate: "",
+          endDate: "",
+          location: "",
+          description: "",
+        },
+      },
+    });
+  };
 
   render() {
     const { position, company, startDate, endDate, location, description } =

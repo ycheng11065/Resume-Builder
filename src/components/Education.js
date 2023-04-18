@@ -11,13 +11,13 @@ class Education extends Component {
   }
 
   handleChange = (school) => (e) => {
-    const { inputValues, name, value } = e.target;
+    const { name, value } = e.target;
 
     this.setState({
       inputValues: { 
-        ...inputValues,
+        ...this.state.inputValues,
         [school]: {
-          ...inputValues[school],
+          ...this.state.inputValues[school],
           [name]: value,
         },
       },
@@ -38,8 +38,8 @@ class Education extends Component {
             degree: "",
             startDate: "",
             endDate: "",
-          }
-        }
+          },
+        },
     });
   };
 
