@@ -39,7 +39,7 @@ class App extends Component {
         </div>
         <div>
           <ResumePreview
-            personalInfo={this.state.personalInfo}
+            personalInfo={this.state.PersonalInfo}
             education={this.state.Education}
             projects={this.state.Projects}
             skills={this.state.Skills}
