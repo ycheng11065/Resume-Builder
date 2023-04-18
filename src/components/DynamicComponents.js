@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 
 class DynamicComponents extends Component {
-    constructor(props) {
+    constructor(props, config) {
         super(props);
 
         this.state = {
             items: [],
             inputValues: {},
         };
+
+        this.itemName = config.itemName;
+        this.title = config.title;
+        this.defaultInputValues = config.defaultInputValues;
     }
 
     handleChange = (itemId) => (e) => {
@@ -22,33 +26,36 @@ class DynamicComponents extends Component {
             },
           },
         });
-      };
+    };
     
     addItem = () => {
         const { items, inputValues } = this.state;
         const itemCount = items.length;
-        const itemId = `${this.props.itemName}-${itemCount + 1}`;
+        const itemId = `${this.itemName}-${itemCount + 1}`;
 
         this.setState({
             items: [ ...items, itemId],
             inputValues: { 
                 ...inputValues, 
-                [itemId]: this.props.defaultInputValues,
-            },
+                [itemId]: {
+                    ...this.defaultInputValues,
+                },
+            },  
         });
     };
 
-    renderInputList() {
-        const { items, inputValues } = this.state;
-        return items.map((itemId) => this.props.renderInputs(itemId, inputValues[itemId], this.handleChange(itemId)));
-    }
-
     render() {
+        const { items, inputValues } = this.state;
+
         return (
             <div>
-                <h2>{this.props.title}</h2>
-                <button onClick={this.addItem}>Add {this.props.itemName}</button>
-                {this.renderInputList}
+                <h2>{this.title}</h2>
+                <button onClick={this.addItem}>Add {this.itemName}</button>
+                {items.map((itemId) => (
+                    <div key={itemId}>
+                        {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
+                    </div>
+                ))}
             </div>
         );
     }
