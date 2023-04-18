@@ -11,13 +11,13 @@ class Education extends Component {
   }
 
   handleChange = (school) => (e) => {
-    const { name, value } = e.target;
+    const { inputValues, name, value } = e.target;
 
     this.setState({
       inputValues: { 
-        ...this.state.inputValues,
+        ...inputValues,
         [school]: {
-          ...this.state.inputValues[school],
+          ...inputValues[school],
           [name]: value,
         },
       },

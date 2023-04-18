@@ -16,10 +16,19 @@ class WorkExperience extends Component {
     };
   }
 
-  handleChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
+  handleChange = (workId) => (e) => {
+    const { inputValues, name, value } = e.target;
+    this.setState({ 
+      inputValues: {
+        ...inputValues,
+        [workId]: {
+          ...inputValues[workId],
+          [name]: value,
+        },
+      },  
+    });
   };
+
 
   render() {
     const { position, company, startDate, endDate, location, description } =
@@ -28,6 +37,7 @@ class WorkExperience extends Component {
     return (
       <div>
         <h2>Work Experiences</h2>
+        <button>Add Work Experience</button>
         <input
           type="text"
           name="position"
