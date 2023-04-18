@@ -17,9 +17,7 @@ class WorkExperience extends DynamicComponents {
     });
   }
 
-
   renderInputs(workId, inputValues, handleChange) {
-
     return (
       <div>
         <input

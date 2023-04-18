@@ -16,7 +16,6 @@ class Projects extends DynamicComponents {
   }
 
   renderInputs(projectId, inputValues, handleChange) {
-
     return (
       <div>
         <input
@@ -47,7 +46,7 @@ class Projects extends DynamicComponents {
           onChange={handleChange}
           rows="4"
           cols="50"
-        /> 
+        />
       </div>
     );
   }
