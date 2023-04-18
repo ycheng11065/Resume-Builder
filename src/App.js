@@ -5,6 +5,7 @@ import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import ResumePreview from "./components/ResumePreview"
 
 class App extends Component {
   constructor(props) {
@@ -28,12 +29,23 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Resume Builder</h1>
-        <PersonalInfo onUpdate={(newData) => this.updateStates(newData, "PersonalInfo")} />
-        <Education onUpdate={(newData) => this.updateStates(newData, "Education")} />
-        <WorkExperience onUpdate={(newData) => this.updateStates(newData, "WorkExperience")} />
-        <Projects onUpdate={(newData) => this.updateStates(newData, "Projects")} />
-        <Skills onUpdate={(newData) => this.updateStates(newData, "Skills")} />
+        <div>
+          <h1>Resume Builder</h1>
+          <PersonalInfo onUpdate={(newData) => this.updateStates(newData, "PersonalInfo")} />
+          <Education onUpdate={(newData) => this.updateStates(newData, "Education")} />
+          <WorkExperience onUpdate={(newData) => this.updateStates(newData, "WorkExperience")} />
+          <Projects onUpdate={(newData) => this.updateStates(newData, "Projects")} />
+          <Skills onUpdate={(newData) => this.updateStates(newData, "Skills")} />
+        </div>
+        <div>
+          <ResumePreview
+            personalInfo={this.state.personalInfo}
+            education={this.state.Education}
+            projects={this.state.Projects}
+            skills={this.state.Skills}
+            workExperience={this.state.WorkExperience}
+          />
+        </div>
       </div>
     );
   }
