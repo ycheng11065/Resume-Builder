@@ -1,87 +1,53 @@
-import React, { Component } from "react";
+import React from "react";
+import DynamicComponents from "./DynamicComponents";
 
-class Projects extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      projects: [],
-      inputValues: {},
-    };
+class Projects extends DynamicComponents {
+  constructor(props) {
+    super(props, {
+      itemName: "Projects",
+      title: "Technical Projects",
+      defaultInputValues: {
+        name: "",
+        technology: "",
+        date: "",
+        description: "",
+      },
+    });
   }
 
-  handleChange = (projectId) => (e) => {
-    const { name, value } = e.target;
-    this.setState({
-      inputValues: {
-        ...this.state.inputValues,
-        [projectId]: {
-          ...this.state.inputValues[projectId],
-         [name]: value,
-        },
-      },
-    });
-  };
-
-  addProject = () => {
-    const { projects, inputValues } = this.state;
-    const projectCount = projects.length;
-    const projectId = `Project-${projectCount + 1}`;
-
-    this.setState({
-      projects: [ ...projects, projectId ],
-      inputValues: {
-        ...inputValues,
-        [projectId]: {
-          name: "",
-          technology: "",
-          date: "",
-          description: "",
-        },
-      },
-    });
-  };
-
-  render() {
-    const { projects, inputValues } = this.state;
+  renderInputs(projectId, inputValues, handleChange) {
 
     return (
       <div>
-        <h2>Projects</h2>
-        <button onClick={this.addProject}>Add Project</button>
-        {projects.map(projectId => (
-          <div key={projectId}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Project Name"
-              value={inputValues[projectId]["name"]}
-              onChange={this.handleChange(projectId)}
-            />
-            <input
-              type="text"
-              name="technology"
-              placeholder="Technology used"
-              value={inputValues[projectId]["technology"]}
-              onChange={this.handleChange(projectId)}
-            />
-            <input
-              type="text"
-              name="date"
-              placeholder="Date"
-              value={inputValues[projectId]["date"]}
-              onChange={this.handleChange(projectId)}
-            />
-            <textarea
-              name="description"
-              placeholder="Description"
-              value={inputValues[projectId]["description"]}
-              onChange={this.handleChange(projectId)}
-              rows="4"
-              cols="50"
-            /> 
-          </div>
-        ))}
+        <input
+          type="text"
+          name="name"
+          placeholder="Project Name"
+          value={inputValues[projectId]["name"]}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="technology"
+          placeholder="Technology used"
+          value={inputValues[projectId]["technology"]}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="date"
+          placeholder="Date"
+          value={inputValues[projectId]["date"]}
+          onChange={handleChange}
+        />
+        <textarea
+          name="description"
+          placeholder="Description"
+          value={inputValues[projectId]["description"]}
+          onChange={handleChange}
+          rows="4"
+          cols="50"
+        /> 
       </div>
     );
   }
