@@ -14,9 +14,9 @@ class Projects extends Component {
     const { name, value } = e.target;
     this.setState({
       inputValues: {
-        ...this.inputValues,
+        ...this.state.inputValues,
         [projectId]: {
-          ...this.inputValues[projectId],
+          ...this.state.inputValues[projectId],
          [name]: value,
         },
       },
