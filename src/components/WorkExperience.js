@@ -5,6 +5,8 @@ class WorkExperience extends Component {
     super();
 
     this.state = {
+      workExperience: [],
+      inputValues: {},
       position: "",
       company: "",
       startDate: "",
