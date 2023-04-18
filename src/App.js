@@ -31,9 +31,9 @@ class App extends Component {
         <h1>Resume Builder</h1>
         <PersonalInfo onUpdate={(newData) => this.updateStates(newData, "PersonalInfo")} />
         <Education onUpdate={(newData) => this.updateStates(newData, "Education")} />
-        <WorkExperience onUpdate={(newData) => this.updateStates(newData, "Projects")} />
-        <Projects onUpdate={(newData) => this.updateStates(newData, "Skills")} />
-        <Skills onUpdate={(newData) => this.updateStates(newData, "WorkExperience")} />
+        <WorkExperience onUpdate={(newData) => this.updateStates(newData, "WorkExperience")} />
+        <Projects onUpdate={(newData) => this.updateStates(newData, "Projects")} />
+        <Skills onUpdate={(newData) => this.updateStates(newData, "Skills")} />
       </div>
     );
   }
