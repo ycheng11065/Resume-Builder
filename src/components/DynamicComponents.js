@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 class DynamicComponents extends Component {
     constructor(props, config) {
@@ -30,8 +31,8 @@ class DynamicComponents extends Component {
     
     addItem = () => {
         const { items, inputValues } = this.state;
-        const itemCount = items.length;
-        const itemId = `${this.itemName}-${itemCount + 1}`;
+        // const itemCount = items.length;
+        const itemId = uuidv4();
 
         this.setState({
             items: [ ...items, itemId],
@@ -41,6 +42,20 @@ class DynamicComponents extends Component {
                     ...this.defaultInputValues,
                 },
             },  
+        });
+    };
+
+    handleDelete = (itemId) => {
+        const { items, inputValues} = this.state;
+
+        this.setState({
+            items: items.filter(item => item !== itemId),
+            inputValues: Object.entries(inputValues)
+                .filter(([key]) => key !== itemId)
+                .reduce((obj, [key, value]) => {
+                    obj[key] = value;
+                    return obj;
+            }, {}),
         });
     };
 
@@ -54,6 +69,7 @@ class DynamicComponents extends Component {
                 {items.map((itemId) => (
                     <div key={itemId}>
                         {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
+                        <button onClick={() => this.handleDelete(itemId)}>Delete</button>
                     </div>
                 ))}
             </div>

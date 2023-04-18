@@ -23,5 +23,3 @@ class App extends Component {
 
 export default App;
 
-// Field to fill in the required category info
-// A preview box to see the progress of the resume
