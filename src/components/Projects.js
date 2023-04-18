@@ -5,16 +5,41 @@ class Projects extends Component {
     super();
 
     this.state = {
-      name: "",
-      technology: "",
-      date: "",
-      description: "",
+      projects: [],
+      inputValues: {},
     };
   }
 
-  handleChange = (e) => {
+  handleChange = (projectId) => (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
+    this.setState({
+      inputValues: {
+        ...this.inputValues,
+        [projectId]: {
+          ...this.inputValues[projectId],
+         [name]: value,
+        },
+      },
+    });
+  };
+
+  addProject = () => {
+    const { projects, inputValues } = this.state;
+    const projectCount = projects.length;
+    const projectId = `Project-${projectCount + 1}`;
+
+    this.setState({
+      projects: [ ...projects, projectId ],
+      inputValues: {
+        ...inputValues,
+        [projectId]: {
+          name: "",
+          technology: "",
+          date: "",
+          description: "",
+        },
+      },
+    });
   };
 
   render() {
