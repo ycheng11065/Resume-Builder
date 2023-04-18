@@ -26,12 +26,11 @@ class DynamicComponents extends Component {
           [name]: value,
         },
       },
-    });
+    }, () => this.props.onUpdate(this.state));
   };
 
   addItem = () => {
     const { items, inputValues } = this.state;
-    // const itemCount = items.length;
     const itemId = uuidv4();
 
     this.setState({
@@ -42,7 +41,7 @@ class DynamicComponents extends Component {
           ...this.defaultInputValues,
         },
       },
-    });
+    }, () => this.props.onUpdate(this.state));
   };
 
   handleDelete = (itemId) => {
@@ -56,7 +55,7 @@ class DynamicComponents extends Component {
           obj[key] = value;
           return obj;
         }, {}),
-    });
+    }, () => this.props.onUpdate(this.state));
   };
 
   render() {
