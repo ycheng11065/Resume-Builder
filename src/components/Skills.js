@@ -30,7 +30,7 @@ class Skills extends Component {
         skills: { ...skills, [category]: {} },
         category: "",
         intputValues: { ...this.state.inputValues, [category]: "" },
-      });
+      }, () => this.props.onUpdate(this.state));
     }
   };
 
@@ -45,7 +45,7 @@ class Skills extends Component {
           [category]: { ...skills[category], [skillId]: inputValues[category] },
         },
         inputValues: { ...inputValues, [category]: "" },
-      });
+      }, () => this.props.onUpdate(this.state));
     }
   };
 
@@ -59,7 +59,7 @@ class Skills extends Component {
           obj[key] = value;
           return obj;
         }, {}),
-    });
+    }, () => this.props.onUpdate(this.state));
   };
 
   handleDeleteSkill = (category, skillId) => {
@@ -75,7 +75,7 @@ class Skills extends Component {
             return obj;
           }, {}),
       },
-    });
+    }, () => this.props.onUpdate(this.state));
   };
 
   renderInput(skills, inputValues) {
