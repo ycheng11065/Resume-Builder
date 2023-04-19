@@ -4,3 +4,7 @@
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
+
+:root {
+    --resume-preview-width: 40rem;
+}

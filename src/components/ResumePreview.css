@@ -1,9 +1,14 @@
-
-
-
 .Resume-Preview {
-    box-sizing: border-box;
     border: 2px solid red;
-    width: 8.5in;
-    height: 11in;
+    width: var(--resume-preview-width);
+    padding-bottom: calc(var(--resume-preview-width) * 1.294);
+    position: relative;
+}
+
+.Resume-Preview-Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
