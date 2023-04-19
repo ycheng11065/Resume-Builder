@@ -25,27 +25,26 @@ class ResumePreview extends Component {
           {Object.keys(education).length > 0 && (
             <div className="Education">
               <h2>EDUCATION</h2>
-              {Object.keys(education).length > 0 &&
-                Object.entries(education.inputValues).map(
-                  ([school, schoolInfo]) => (
-                    <div key={school}>
-                      <h3>
-                        {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
-                        {personalInfo.major} Major
-                      </h3>
-                      <h4>
-                        {schoolInfo.startDate} - {schoolInfo.endDate}
-                      </h4>
-                    </div>
-                  )
-                )}
+              {Object.entries(education.inputValues).map(
+                ([school, schoolInfo]) => (
+                  <div key={school}>
+                    <h3>
+                      {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
+                      {personalInfo.major} Major
+                    </h3>
+                    <h4>
+                      {schoolInfo.startDate} - {schoolInfo.endDate}
+                    </h4>
+                  </div>
+                )
+              )}
             </div>
           )}
 
-          <div className="Work-Experience">
-            <h2>Work Experience</h2>
-            {Object.keys(workExperience).length > 0 &&
-              Object.entries(workExperience.inputValues).map(
+          {Object.keys(workExperience).length > 0 && (
+            <div className="Work-Experience">
+              <h2>Work Experience</h2>
+              {Object.entries(workExperience.inputValues).map(
                 ([workId, workInfo]) => (
                   <div key={workId}>
                     <h3>{workInfo.position}</h3>
@@ -58,7 +57,8 @@ class ResumePreview extends Component {
                   </div>
                 )
               )}
-          </div>
+            </div>
+          )}
 
           <div className="Technical-Projects">
             <h2>Technical Projects</h2>
