@@ -7,7 +7,7 @@ class PersonalInfo extends Component {
       firstName: "",
       lastName: "",
       major: "",
-      year: "",
+      yearLevel: "",
       phone: "",
       email: "",
       linkedin: "",
