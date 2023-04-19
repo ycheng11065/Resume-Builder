@@ -22,7 +22,9 @@ class ResumePreview extends Component {
             </h3>
           </div>
 
-          {Object.keys(education).length > 0 && (
+          {Object.keys(education).length > 0 &&
+            Object.keys(education.inputValues).length > 0 &&
+            education.items.length > 0 && (
             <div className="Education">
               <h2>EDUCATION</h2>
               {Object.entries(education.inputValues).map(
