@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ResumePreview.css";
 
 class ResumePreview extends Component {
   render() {
