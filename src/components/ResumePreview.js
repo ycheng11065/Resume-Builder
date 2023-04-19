@@ -14,34 +14,37 @@ class ResumePreview extends Component {
               {personalInfo.firstName} {personalInfo.lastName}
             </h1>
             <h3>
-              {personalInfo.major} Major, {personalInfo.yearLevel} Year
+              {personalInfo.major ? personalInfo.major + "Major" : ""}
+              {personalInfo.yearLevel ? ", " + personalInfo.yearLevel + " year" : ""}
             </h3>
             <h3>
-              {personalInfo.phone} ⋄ {personalInfo.email} ⋄{" "}
-              {personalInfo.linkedin} ⋄ {personalInfo.github}
+              {personalInfo.phone}
+              {personalInfo.email ? " ⋄ " + personalInfo.email : ""}
+              {personalInfo.linkedin ? " ⋄ " + personalInfo.linkedin : ""}
+              {personalInfo.github ? " ⋄ " + personalInfo.github : ""}
             </h3>
           </div>
 
           {Object.keys(education).length > 0 &&
             Object.keys(education.inputValues).length > 0 &&
             education.items.length > 0 && (
-            <div className="Education">
-              <h2>EDUCATION</h2>
-              {Object.entries(education.inputValues).map(
-                ([school, schoolInfo]) => (
-                  <div key={school}>
-                    <h3>
-                      {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
-                      {personalInfo.major} Major
-                    </h3>
-                    <h4>
-                      {schoolInfo.startDate} - {schoolInfo.endDate}
-                    </h4>
-                  </div>
-                )
-              )}
-            </div>
-          )}
+              <div className="Education">
+                <h2>EDUCATION</h2>
+                {Object.entries(education.inputValues).map(
+                  ([school, schoolInfo]) => (
+                    <div key={school}>
+                      <h3>
+                        {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
+                        {personalInfo.major} Major
+                      </h3>
+                      <h4>
+                        {schoolInfo.startDate} - {schoolInfo.endDate}
+                      </h4>
+                    </div>
+                  )
+                )}
+              </div>
+            )}
 
           {Object.keys(workExperience).length > 0 &&
             Object.keys(workExperience.inputValues).length > 0 &&
@@ -82,22 +85,22 @@ class ResumePreview extends Component {
               </div>
             )}
 
-          {Object.keys(skills).length > 0 && 
-            Object.keys(skills.skills).length > 0 &&(
-            <div className="Technical-Skills">
-              <h2>Technical Skills</h2>
-              {Object.entries(skills.skills).map(([category, skillList]) => (
-                <div key={category}>
-                  <h3>{category}</h3>
-                  <ul>
-                    {Object.entries(skillList).map(([skillId, skill]) => (
-                      <li key={skillId}>{skill},</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
+          {Object.keys(skills).length > 0 &&
+            Object.keys(skills.skills).length > 0 && (
+              <div className="Technical-Skills">
+                <h2>Technical Skills</h2>
+                {Object.entries(skills.skills).map(([category, skillList]) => (
+                  <div key={category}>
+                    <h3>{category}</h3>
+                    <ul>
+                      {Object.entries(skillList).map(([skillId, skill]) => (
+                        <li key={skillId}>{skill},</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
         </div>
       </div>
     );
