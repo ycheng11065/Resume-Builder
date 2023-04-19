@@ -35,14 +35,14 @@ class WorkExperience extends DynamicComponents {
           onChange={handleChange}
         />
         <input
-          type="date"
+          type="text"
           name="startDate"
           placeholder="Start date"
           value={inputValues[workId]["startDate"]}
           onChange={handleChange}
         />
         <input
-          type="date"
+          type="text"
           name="endDate"
           placeholder="End date"
           value={inputValues[workId]["endDate"]}
