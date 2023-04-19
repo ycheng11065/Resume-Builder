@@ -71,7 +71,20 @@ class ResumePreview extends Component {
             )}
         </div>
 
-        <div className="Technical-Skills"></div>
+        <div className="Technical-Skills">
+          <h2>Technical Skills</h2>
+          {Object.keys(skills).length > 0 &&
+            Object.entries(skills.skills).map(([category, skillList]) => (
+              <div key={category}>
+                <h3>{category}</h3>
+                <ul>
+                  {Object.entriesskillList.map(([skillId, skill]) => (
+                    <li key={skillId}>{skill},</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </div>
       </div>
     );
   }
