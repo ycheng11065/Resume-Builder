@@ -62,21 +62,23 @@ class ResumePreview extends Component {
               </div>
             )}
 
-          {Object.keys(projects).length > 0 && (
-            <div className="Technical-Projects">
-              <h2>Technical Projects</h2>
-              {Object.entries(projects.inputValues).map(
-                ([projectId, projectInfo]) => (
-                  <div key={projectId}>
-                    <h3>{projectInfo.name} |</h3>
-                    <h4>{projectInfo.technology}</h4>
-                    <h4>{projectInfo.completionDate}</h4>
-                    <pre>{projectInfo.description}</pre>
-                  </div>
-                )
-              )}
-            </div>
-          )}
+          {Object.keys(projects).length > 0 &&
+            Object.keys(projects.inputValues).length > 0 &&
+            projects.items.length > 0 && (
+              <div className="Technical-Projects">
+                <h2>Technical Projects</h2>
+                {Object.entries(projects.inputValues).map(
+                  ([projectId, projectInfo]) => (
+                    <div key={projectId}>
+                      <h3>{projectInfo.name} |</h3>
+                      <h4>{projectInfo.technology}</h4>
+                      <h4>{projectInfo.completionDate}</h4>
+                      <pre>{projectInfo.description}</pre>
+                    </div>
+                  )
+                )}
+              </div>
+            )}
 
           {Object.keys(skills).length > 0 && (
             <div className="Technical-Skills">
