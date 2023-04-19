@@ -50,13 +50,26 @@ class ResumePreview extends Component {
                   </h4>
                   <h4>{workInfo.company}</h4>
                   <h4>{workInfo.location}</h4>
-                  <p>{workInfo.description}</p>
+                  <pre>{workInfo.description}</pre>
                 </div>
               )
             )}
         </div>
 
-        <div className="Technical-Projects"></div>
+        <div className="Technical-Projects">
+          <h2>Technical Projects</h2>
+          {Object.keys(projects).length > 0 &&
+            Object.entries(projects.inputValues).map(
+              ([projectId, projectInfo]) => (
+                <div key={projectId}>
+                  <h3>{projectInfo.name} |</h3>
+                  <h4>{projectInfo.technology}</h4>
+                  <h4>{projectInfo.completionDate}</h4>
+                  <pre>{projectInfo.description}</pre>
+                </div>
+              )
+            )}
+        </div>
 
         <div className="Technical-Skills"></div>
       </div>

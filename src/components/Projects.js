@@ -9,7 +9,7 @@ class Projects extends DynamicComponents {
       defaultInputValues: {
         name: "",
         technology: "",
-        date: "",
+        completionDate: "",
         description: "",
       },
     });
@@ -34,9 +34,9 @@ class Projects extends DynamicComponents {
         />
         <input
           type="text"
-          name="date"
-          placeholder="Date"
-          value={inputValues[projectId]["date"]}
+          name="completionDate"
+          placeholder="Completion Date"
+          value={inputValues[projectId]["completionDate"]}
           onChange={handleChange}
         />
         <textarea
