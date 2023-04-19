@@ -13,30 +13,30 @@ class ResumePreview extends Component {
             <h1 id="Name">
               {personalInfo.firstName} {personalInfo.lastName}
             </h1>
-            <h3>
+            <h4>
               {personalInfo.major ? personalInfo.major + " Major" : ""}
               {personalInfo.yearLevel ? ", " + personalInfo.yearLevel + " year" : ""}
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               {personalInfo.phone}
               {personalInfo.email ? " ⋄ " + personalInfo.email : ""}
               {personalInfo.linkedin ? " ⋄ " + personalInfo.linkedin : ""}
               {personalInfo.github ? " ⋄ " + personalInfo.github : ""}
-            </h3>
+            </h4>
           </div>
 
           {Object.keys(education).length > 0 &&
             Object.keys(education.inputValues).length > 0 &&
             education.items.length > 0 && (
               <div className="Education">
-                <h2>EDUCATION</h2>
+                <h3 id="Education-Title">EDUCATION</h3>
                 {Object.entries(education.inputValues).map(
                   ([school, schoolInfo]) => (
-                    <div key={school}>
-                      <h3>
+                    <div id="Education-Info" key={school}>
+                      <h4>
                         {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
                         {personalInfo.major} Major
-                      </h3>
+                      </h4>
                       <h4>
                         {schoolInfo.startDate} - {schoolInfo.endDate}
                       </h4>
