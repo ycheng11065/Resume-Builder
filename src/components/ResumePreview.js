@@ -41,24 +41,26 @@ class ResumePreview extends Component {
             </div>
           )}
 
-          {Object.keys(workExperience).length > 0 && (
-            <div className="Work-Experience">
-              <h2>Work Experience</h2>
-              {Object.entries(workExperience.inputValues).map(
-                ([workId, workInfo]) => (
-                  <div key={workId}>
-                    <h3>{workInfo.position}</h3>
-                    <h4>
-                      {workInfo.startDate} - {workInfo.endDate}
-                    </h4>
-                    <h4>{workInfo.company}</h4>
-                    <h4>{workInfo.location}</h4>
-                    <pre>{workInfo.description}</pre>
-                  </div>
-                )
-              )}
-            </div>
-          )}
+          {Object.keys(workExperience).length > 0 &&
+            Object.keys(workExperience.inputValues).length > 0 &&
+            workExperience.items.length > 0 && (
+              <div className="Work-Experience">
+                <h2>Work Experience</h2>
+                {Object.entries(workExperience.inputValues).map(
+                  ([workId, workInfo]) => (
+                    <div key={workId}>
+                      <h3>{workInfo.position}</h3>
+                      <h4>
+                        {workInfo.startDate} - {workInfo.endDate}
+                      </h4>
+                      <h4>{workInfo.company}</h4>
+                      <h4>{workInfo.location}</h4>
+                      <pre>{workInfo.description}</pre>
+                    </div>
+                  )
+                )}
+              </div>
+            )}
 
           {Object.keys(projects).length > 0 && (
             <div className="Technical-Projects">
@@ -91,7 +93,6 @@ class ResumePreview extends Component {
               ))}
             </div>
           )}
-          
         </div>
       </div>
     );
