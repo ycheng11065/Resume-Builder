@@ -80,7 +80,8 @@ class ResumePreview extends Component {
               </div>
             )}
 
-          {Object.keys(skills).length > 0 && (
+          {Object.keys(skills).length > 0 && 
+            Object.keys(skills.skills).length > 0 &&(
             <div className="Technical-Skills">
               <h2>Technical Skills</h2>
               {Object.entries(skills.skills).map(([category, skillList]) => (
