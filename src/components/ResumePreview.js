@@ -10,11 +10,11 @@ class ResumePreview extends Component {
       <div className="Resume-Preview">
         <div className="Resume-Preview-Container">
           <div className="Personal-Profile">
-            <h1>
+            <h1 id="Name">
               {personalInfo.firstName} {personalInfo.lastName}
             </h1>
             <h3>
-              {personalInfo.major ? personalInfo.major + "Major" : ""}
+              {personalInfo.major ? personalInfo.major + " Major" : ""}
               {personalInfo.yearLevel ? ", " + personalInfo.yearLevel + " year" : ""}
             </h3>
             <h3>
