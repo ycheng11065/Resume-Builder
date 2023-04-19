@@ -12,11 +12,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      PersonalInfo: {},
-      Education: {},
-      Projects: {},
-      Skills: {},
-      WorkExperience: {},
+      personalInfo: {},
+      education: {},
+      projects: {},
+      skills: {},
+      workExperience: {},
     }
   }
 
@@ -31,19 +31,19 @@ class App extends Component {
       <div>
         <div>
           <h1>Resume Builder</h1>
-          <PersonalInfo onUpdate={(newData) => this.updateStates(newData, "PersonalInfo")} />
-          <Education onUpdate={(newData) => this.updateStates(newData, "Education")} />
-          <WorkExperience onUpdate={(newData) => this.updateStates(newData, "WorkExperience")} />
-          <Projects onUpdate={(newData) => this.updateStates(newData, "Projects")} />
-          <Skills onUpdate={(newData) => this.updateStates(newData, "Skills")} />
+          <PersonalInfo onUpdate={(newData) => this.updateStates(newData, "personalInfo")} />
+          <Education onUpdate={(newData) => this.updateStates(newData, "education")} />
+          <WorkExperience onUpdate={(newData) => this.updateStates(newData, "workExperience")} />
+          <Projects onUpdate={(newData) => this.updateStates(newData, "projects")} />
+          <Skills onUpdate={(newData) => this.updateStates(newData, "skills")} />
         </div>
         <div>
           <ResumePreview
-            personalInfo={this.state.PersonalInfo}
-            education={this.state.Education}
-            projects={this.state.Projects}
-            skills={this.state.Skills}
-            workExperience={this.state.WorkExperience}
+            personalInfo={this.state.personalInfo}
+            education={this.state.education}
+            projects={this.state.projects}
+            skills={this.state.skills}
+            workExperience={this.state.workExperience}
           />
         </div>
       </div>

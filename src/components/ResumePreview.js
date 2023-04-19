@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 class ResumePreview extends Component {
   render() {
-    const { personalInfo, Education, WorkExperience, Projects, Skills } =
+    const { personalInfo, education, workExperience, projects, skills } =
       this.props;
 
     return (
-      <div className="Resume Preview">
+      <div className="Resume-Preview">
         <div className="Personal-Profile">
           <h1>
             {personalInfo.firstName} {personalInfo.lastName}
@@ -21,7 +21,12 @@ class ResumePreview extends Component {
         </div>
 
         <div className="Education">
-
+            <h2>EDUCATION</h2>
+            {Object.keys(education).length > 0 && (
+                Object.entries(education.inputValues).map(([school, schoolInfo]) => (
+                    <h3 key={school}>{schoolInfo.schoolName}</h3>
+                ))
+            )}
         </div>
 
         <div className="Work-Experience">
