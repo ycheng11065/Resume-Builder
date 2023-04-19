@@ -60,10 +60,10 @@ class ResumePreview extends Component {
             </div>
           )}
 
-          <div className="Technical-Projects">
-            <h2>Technical Projects</h2>
-            {Object.keys(projects).length > 0 &&
-              Object.entries(projects.inputValues).map(
+          {Object.keys(projects).length > 0 && (
+            <div className="Technical-Projects">
+              <h2>Technical Projects</h2>
+              {Object.entries(projects.inputValues).map(
                 ([projectId, projectInfo]) => (
                   <div key={projectId}>
                     <h3>{projectInfo.name} |</h3>
@@ -73,12 +73,13 @@ class ResumePreview extends Component {
                   </div>
                 )
               )}
-          </div>
+            </div>
+          )}
 
-          <div className="Technical-Skills">
-            <h2>Technical Skills</h2>
-            {Object.keys(skills).length > 0 &&
-              Object.entries(skills.skills).map(([category, skillList]) => (
+          {Object.keys(skills).length > 0 && (
+            <div className="Technical-Skills">
+              <h2>Technical Skills</h2>
+              {Object.entries(skills.skills).map(([category, skillList]) => (
                 <div key={category}>
                   <h3>{category}</h3>
                   <ul>
@@ -88,7 +89,9 @@ class ResumePreview extends Component {
                   </ul>
                 </div>
               ))}
-          </div>
+            </div>
+          )}
+          
         </div>
       </div>
     );
