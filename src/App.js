@@ -1,6 +1,5 @@
 import "./App.css";
 import { v4 as uuidv4 } from "uuid";
-import html2pdf from "html2pdf.js";
 import React, { Component } from "react";
 import PersonalInfo from "./components/PersonalInfo";
 import WorkExperience from "./components/WorkExperience";
@@ -19,9 +18,8 @@ class App extends Component {
       projects: {},
       skills: {},
       workExperience: {},
+      generatedPDF: false,
     };
-
-    this.resumePreviewRef = React.createRef();
   }
 
   generateSample = () => {
@@ -177,15 +175,7 @@ class App extends Component {
   };
 
   saveAsPDF = () => {
-    const options = {
-      margin: 0,
-      filename: "resume.pdf",
-      image: { type: "jpeg", quality: 1},
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: "in", format: "letter", orientation:"portrait"},
-    };
-
-    html2pdf().set(options).from(this.resumePreviewRef.current).save();
+    this.setState({ generatedPDF: true });
   };
 
   render() {
@@ -194,7 +184,7 @@ class App extends Component {
         <div>
           <h1>Resume Builder</h1>
           <button onClick={() => this.generateSample()}>Generate Sample</button>
-          <button onClick={() => this.saveAsPDF()}>Save as PDF</button>
+          {/* <button onClick={() => this.saveAsPDF()}>Save as PDF</button> */}
           <PersonalInfo
             onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
             data={this.state.personalInfo}
@@ -218,7 +208,6 @@ class App extends Component {
         </div>
         <div>
           <ResumePreview
-          ref={this.resumePreviewRef}
             personalInfo={this.state.personalInfo}
             education={this.state.education}
             projects={this.state.projects}
