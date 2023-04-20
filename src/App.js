@@ -81,28 +81,30 @@ class App extends Component {
             name: "Real-time Chat Application",
             technology: "React, Socket.IO, Node.js, Express",
             completionDate: "January 2022",
-            description: `• Created a real-time chat application using WebSockets
-            • Implemented private and group chat functionality
-            • Used Socket.IO for seamless communication between server and clients
-            • Designed a responsive user interface using Material-UI`,
+            description: 
+              "• Created a real-time chat application using \n" +
+              "• Implemented private and group chat functionality\n" +
+              "• Used Socket.IO for seamless communication between server and clients\n" +
+              "• Designed a responsive user interface using Material-UI`",
           },
           [projectIds[2]]: {
             name: "Weather Forecast Web App",
             technology: "Vue.js, Vuex, OpenWeatherMap API",
             completionDate: "August 2021",
-            description: `• Developed a weather forecast web app that displays current weather and 7-day forecast
-            • Integrated OpenWeatherMap API to fetch real-time weather data
-            • Utilized Vuex for centralized state management
-            • Implemented geolocation to automatically fetch weather data based on user's location`,
+            description: 
+              "• Developed a weather forecast web app that displays current weather and 7-day forecast\n" +
+              "• Integrated OpenWeatherMap API to fetch real-time weather data\n" +
+              "• Utilized Vuex for centralized state management\n" +
+              "• Implemented geolocation to automatically fetch weather data based on user's location",
           },
           [projectIds[3]]: {
             name: "Task Management System",
             technology: "Angular, Firebase, Firestore",
             completionDate: "April 2021",
-            description: `• Built a task management system to help users organize their tasks
-             • Implemented CRUD operations for tasks and projects
-             • Utilized Firebase for user authentication and Firestore for data storage
-             • Applied responsive design principles for an optimal user experience on various devices`,
+            description: 
+              "• Built a task management system to help users organize their tasks\n" +
+              "• Implemented CRUD operations for tasks and projects\n" +
+              "• Utilized Firebase for user authentication and Firestore for data storage",
           },
         },
       },

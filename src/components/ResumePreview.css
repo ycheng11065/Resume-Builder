@@ -35,6 +35,7 @@
 }
 
 #Education-Info {
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -54,6 +55,7 @@
         "company location"
         "description description";
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .Work-Position {
@@ -81,6 +83,24 @@
     margin-top: 0.5rem;
 }
 
-pre {
-    white-space: pre-wrap;
+.Project-Section {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Project-Header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Project-Title {
+    display: flex;
+}
+
+.Project-Tech {
+    padding-left: 0.2rem;
+}
+
+.Project-Description {
+    margin-bottom: 0.5rem;
 }

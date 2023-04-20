@@ -8,3 +8,7 @@
 :root {
     --resume-preview-width: 50rem;
 }
+
+pre {
+    white-space: pre-wrap;
+}
