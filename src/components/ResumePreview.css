@@ -24,20 +24,61 @@
     /* border: 2px solid blue; */
 }
 
-.Education {
-    margin-top: 1rem;
-    /* display: flex; */
-    /* align-items: left; */
-    /* flex-direction: column; */
-    /* border: 2px solid yellow; */
+.Section-Title {
+    text-align: left;
+    border-bottom: 2px solid black;
 }
 
-#Education-Title {
-    border-bottom: 2px solid black;
-    text-align: left;
+.Education {
+    margin-top: 1rem;
+    /* border: 2px solid yellow; */
 }
 
 #Education-Info {
     display: flex;
     justify-content: space-between;
+}
+
+.Work-Experience {
+    position: relative;
+    margin-top: 1rem;
+    /* grid: repeat(2, 1fr) / repeat(2, 1fr); */
+}
+
+.Work-Section {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "position date"
+        "company location"
+        "description description";
+}
+
+.Work-Position {
+    width: auto;
+    height:auto;
+    grid-area: position;
+}
+
+.Work-Date {
+    grid-area: date;
+    text-align: right;
+}
+
+.Work-Company {
+    grid-area: company;
+}
+
+.Work-Location {
+    grid-area: location;
+    text-align: right;
+}
+
+.Work-Description {
+    grid-area: description;
+}
+
+pre {
+    white-space: pre-wrap;
 }

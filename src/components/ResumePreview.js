@@ -29,7 +29,7 @@ class ResumePreview extends Component {
             Object.keys(education.inputValues).length > 0 &&
             education.items.length > 0 && (
               <div className="Education">
-                <h3 id="Education-Title">EDUCATION</h3>
+                <h3 className="Section-Title">EDUCATION</h3>
                 {Object.entries(education.inputValues).map(
                   ([school, schoolInfo]) => (
                     <div id="Education-Info" key={school}>
@@ -50,17 +50,17 @@ class ResumePreview extends Component {
             Object.keys(workExperience.inputValues).length > 0 &&
             workExperience.items.length > 0 && (
               <div className="Work-Experience">
-                <h2>Work Experience</h2>
+                <h3 className="Section-Title">Work Experience</h3>
                 {Object.entries(workExperience.inputValues).map(
                   ([workId, workInfo]) => (
-                    <div key={workId}>
-                      <h3>{workInfo.position}</h3>
-                      <h4>
+                    <div className="Work-Section" key={workId}>
+                      <h4 className="Work-Position">{workInfo.position}</h4>
+                      <h4 className="Work-Date">
                         {workInfo.startDate} - {workInfo.endDate}
                       </h4>
-                      <h4>{workInfo.company}</h4>
-                      <h4>{workInfo.location}</h4>
-                      <pre>{workInfo.description}</pre>
+                      <h4 className="Work-Company">{workInfo.company}</h4>
+                      <h4 className="Work-Location">{workInfo.location}</h4>
+                      <pre className="Work-Description">{workInfo.description}</pre>
                     </div>
                   )
                 )}

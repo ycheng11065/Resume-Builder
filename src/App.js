@@ -71,10 +71,11 @@ class App extends Component {
             name: "Online Marketplace Platform",
             technology: "React, Redux, Node.js, Express, PostgreSQL",
             completionDate: "June 2022",
-            description: `• Developed an online marketplace platform for buying and selling goods
-            • Implemented user authentication and authorization with JWT
-            • Designed a RESTful API to handle user and product data
-            • Utilized Redux for efficient state management`,
+            description:
+              "• Developed an online marketplace platform for buying and selling goods\n" +
+              "• Implemented user authentication and authorization with JWT\n" +
+              "• Designed a RESTful API to handle user and product data\n" +
+              "• Utilized Redux for efficient state management`\n",
           },
           [projectIds[1]]: {
             name: "Real-time Chat Application",
@@ -140,10 +141,11 @@ class App extends Component {
             startDate: "May 2022",
             endDate: "August 2022",
             location: "New York, NY",
-            description: `• Collaborated with a team of engineers to develop a new web application using React and Node.js
-               • Implemented user authentication and authorization using JWT
-               • Optimized database queries to improve application performance
-               • Created unit tests and end-to-end tests using Jest and React Testing Library`,
+            description:
+              "• Collaborated with a team of engineers to develop a web application using React and Node.js\n" +
+              "• Implemented user authentication and authorization using JWT\n" +
+              "• Optimized database queries to improve application performance\n" +
+              "• Created unit tests and end-to-end tests using Jest and React Testing Library",
           },
           [workIds[1]]: {
             position: "Junior Software Developer",
@@ -151,10 +153,11 @@ class App extends Component {
             startDate: "September 2022",
             endDate: "Present",
             location: "San Francisco, CA",
-            description: `• Contributed to the development of a microservices architecture using Java and Spring Boot
-               • Integrated third-party APIs to enhance the functionality of the application
-               • Participated in code reviews and provided constructive feedback to peers
-               • Assisted in migrating the application from a monolithic architecture to microservices`,
+            description:
+              "• Contributed to the development of a microservices architecture using Java and Spring Boot\n" +
+              "• Integrated third-party APIs to enhance the functionality of the application\n" +
+              "• Participated in code reviews and provided constructive feedback to peers\n" +
+              "• Assisted in migrating the application from a monolithic architecture to microservices",
           },
         },
       },
