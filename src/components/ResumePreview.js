@@ -92,15 +92,15 @@ class ResumePreview extends Component {
           {Object.keys(skills).length > 0 &&
             Object.keys(skills.skills).length > 0 && (
               <div className="Technical-Skills">
-                <h2>Technical Skills</h2>
+                <h3 className="Section-Title">TECHNICAL SKILLS</h3>
                 {Object.entries(skills.skills).map(([category, skillList]) => (
-                  <div key={category}>
-                    <h3>{category}</h3>
-                    <ul>
-                      {Object.entries(skillList).map(([skillId, skill]) => (
-                        <li key={skillId}>{skill},</li>
-                      ))}
-                    </ul>
+                  <div className="Skill-Section" key={category}>
+                    <h4>{category}</h4>
+                    <p>
+                      {Object.entries(skillList)
+                        .map(([skillId, skill]) => skill)
+                        .join(", ")}
+                    </p>
                   </div>
                 ))}
               </div>
