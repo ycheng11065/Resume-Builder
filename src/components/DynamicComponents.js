@@ -5,13 +5,22 @@ class DynamicComponents extends Component {
   constructor(props, config) {
     super(props);
     this.state = {
-      items: [],
-      inputValues: {},
+      items: props.data.items || [],
+      inputValues: props.data.inputValues || {},
     };
 
     this.itemName = config.itemName;
     this.title = config.title;
     this.defaultInputValues = config.defaultInputValues;
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.setState({
+        items: this.props.data.items || [],
+        inputValues: this.props.data.inputValues || {},
+      });
+    }
   }
 
   handleChange = (itemId) => (e) => {

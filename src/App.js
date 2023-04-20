@@ -174,7 +174,7 @@ class App extends Component {
       <div>
         <div>
           <h1>Resume Builder</h1>
-          <button onClick={() => this.generateSample}>Reset</button>
+          <button onClick={() => this.generateSample()}>Generate Sample</button>
           <PersonalInfo
             onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
             data={this.state.personalInfo}
