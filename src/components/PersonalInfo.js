@@ -4,15 +4,30 @@ class PersonalInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      major: "",
-      yearLevel: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
+      firstName: props.data.firstName || "",
+      lastName: props.data.lastName || "",
+      major: props.data.major || "",
+      yearLevel: props.data.yearLevel || "",
+      phone: props.data.phone || "",
+      email: props.data.email || "",
+      linkedin: props.data.linkedin || "",
+      github: props.data.github || "",
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.setState({
+        firstName: this.props.data.firstName || "",
+        lastName: this.props.data.lastName || "",
+        major: this.props.data.major || "",
+        yearLevel: this.props.data.yearLevel || "",
+        phone: this.props.data.phone || "",
+        email: this.props.data.email || "",
+        linkedin: this.props.data.linkedin || "",
+        github: this.props.data.github || "",
+      });
+    }
   }
 
   handleChange = (e) => {
