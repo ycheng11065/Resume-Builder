@@ -1,13 +1,11 @@
 .Resume-Preview {
     background-color: #F2EECB;  
-    border: 2px solid red;
     width: var(--resume-preview-width);
     padding-bottom: calc(var(--resume-preview-width) * 1.294);
     position: relative;
 }
 
 .Resume-Preview-Container {
-    border: 2px solid green;
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +19,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* border: 2px solid blue; */
 }
 
 .Section-Title {
@@ -30,8 +27,7 @@
 }
 
 .Education {
-    margin-top: 1rem;
-    /* border: 2px solid yellow; */
+    margin-top: 0.5rem;
 }
 
 #Education-Info {
@@ -43,7 +39,6 @@
 .Work-Experience {
     position: relative;
     margin-top: 0.5rem;
-    /* grid: repeat(2, 1fr) / repeat(2, 1fr); */
 }
 
 .Work-Section {
@@ -103,4 +98,13 @@
 
 .Project-Description {
     margin-bottom: 0.5rem;
+}
+
+.Skill-Section {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.Skill-List {
+    padding-left: 0.4rem;
 }

@@ -78,7 +78,7 @@ class ResumePreview extends Component {
                       <div className="Project-Header">
                         <div className="Project-Title">
                           <h4 className="Project-Name">{projectInfo.name} | </h4>
-                          <h4 className="Project-Tech"><i>{projectInfo.technology}</i></h4>
+                          <p className="Project-Tech"><i>{projectInfo.technology}</i></p>
                         </div>
                         <h4 className="Project-Date">{projectInfo.completionDate}</h4>
                       </div>
@@ -95,11 +95,13 @@ class ResumePreview extends Component {
                 <h3 className="Section-Title">TECHNICAL SKILLS</h3>
                 {Object.entries(skills.skills).map(([category, skillList]) => (
                   <div className="Skill-Section" key={category}>
-                    <h4>{category}</h4>
-                    <p>
-                      {Object.entries(skillList)
-                        .map(([skillId, skill]) => skill)
-                        .join(", ")}
+                    <h4 className="Skill-Category">{category}:</h4>
+                    <p className="Skill-List">
+                      <i>
+                        {Object.entries(skillList)
+                          .map(([skillId, skill]) => skill)
+                          .join(", ")}
+                      </i>
                     </p>
                   </div>
                 ))}
