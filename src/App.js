@@ -177,18 +177,23 @@ class App extends Component {
           <button onClick={() => this.generateSample}>Reset</button>
           <PersonalInfo
             onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
+            data={this.state.personalInfo}
           />
           <Education
             onUpdate={(newData) => this.updateStates(newData, "education")}
+            data={this.state.education}
           />
           <WorkExperience
             onUpdate={(newData) => this.updateStates(newData, "workExperience")}
+            data={this.state.workExperience}
           />
           <Projects
             onUpdate={(newData) => this.updateStates(newData, "projects")}
+            data={this.state.projects}
           />
           <Skills
             onUpdate={(newData) => this.updateStates(newData, "skills")}
+            data={this.state.skills}
           />
         </div>
         <div>
