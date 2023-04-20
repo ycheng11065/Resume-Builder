@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 class DynamicComponents extends Component {
   constructor(props, config) {
     super(props);
-
     this.state = {
       items: [],
       inputValues: {},
