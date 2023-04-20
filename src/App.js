@@ -24,11 +24,17 @@ class App extends Component {
   generateSample = () => {
     const educationId = uuidv4();
     const projectIds = [];
+    const skillIds = [];
     const workIds = [];
 
     for (let i = 0; i < 4; i++) {
       const currId = uuidv4();
       projectIds.push(currId);
+    }
+
+    for (let i = 0; i < 10; i++) {
+      const currId = uuidv4();
+      skillIds.push(currId);
     }
 
     for (let i = 0; i < 2; i++) {
@@ -99,11 +105,41 @@ class App extends Component {
           },
         },
       },
-      skills: {
-        items: [],
-        inputValues: {},
+     skills: {
+        category: "",
+        skills: {
+          "Languages": {
+            [skillIds[0]]: "Python",
+            [skillIds[1]]: "Java",
+            [skillIds[2]]: "JavaScript",
+            [skillIds[3]]: "C++",
+            [skillIds[4]]: "Go",
+          },
+          "Frameworks": {
+            [skillIds[5]]: "React.js",
+            [skillIds[6]]: "Node.js",
+          },
+          "Tools": {
+            [skillIds[7]]: "Git/Github",
+            [skillIds[8]]: "Visual Studio  Code",
+            [skillIds[9]]: "JetBrains Suite",
+          },
+        },
+        inputValues: {
+          "Languages": "",
+          "Frameworks": "",
+          "Tools": "",
+        },
       },
-      workExperience: {},
+      workExperience: {
+        items: [
+          skillIds[0],
+          skillIds[1],
+          skillIds[2],
+        ],
+        inputValues: {
+        },
+      },
     };
 
     this.setState(sampleData);
