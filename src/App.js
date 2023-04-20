@@ -94,8 +94,7 @@ class App extends Component {
             description: 
               "• Developed a weather forecast web app that displays current weather and 7-day forecast\n" +
               "• Integrated OpenWeatherMap API to fetch real-time weather data\n" +
-              "• Utilized Vuex for centralized state management\n" +
-              "• Implemented geolocation to automatically fetch weather data based on user's location",
+              "• Utilized Vuex for centralized state management",
           },
           [projectIds[3]]: {
             name: "Task Management System",
