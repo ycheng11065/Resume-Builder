@@ -99,45 +99,63 @@ class App extends Component {
             technology: "Angular, Firebase, Firestore",
             completionDate: "April 2021",
             description: `• Built a task management system to help users organize their tasks
-            • Implemented CRUD operations for tasks and projects
-            • Utilized Firebase for user authentication and Firestore for data storage
-            • Applied responsive design principles for an optimal user experience on various devices`,
+             • Implemented CRUD operations for tasks and projects
+             • Utilized Firebase for user authentication and Firestore for data storage
+             • Applied responsive design principles for an optimal user experience on various devices`,
           },
         },
       },
-     skills: {
+      skills: {
         category: "",
         skills: {
-          "Languages": {
+          Languages: {
             [skillIds[0]]: "Python",
             [skillIds[1]]: "Java",
             [skillIds[2]]: "JavaScript",
             [skillIds[3]]: "C++",
             [skillIds[4]]: "Go",
           },
-          "Frameworks": {
+          Frameworks: {
             [skillIds[5]]: "React.js",
             [skillIds[6]]: "Node.js",
           },
-          "Tools": {
+          Tools: {
             [skillIds[7]]: "Git/Github",
             [skillIds[8]]: "Visual Studio  Code",
             [skillIds[9]]: "JetBrains Suite",
           },
         },
         inputValues: {
-          "Languages": "",
-          "Frameworks": "",
-          "Tools": "",
+          Languages: "",
+          Frameworks: "",
+          Tools: "",
         },
       },
       workExperience: {
-        items: [
-          skillIds[0],
-          skillIds[1],
-          skillIds[2],
-        ],
+        items: [workIds[0], workIds[1]],
         inputValues: {
+          [workIds[0]]: {
+            position: "Software Engineer Intern",
+            company: "ABC Tech",
+            startDate: "May 2022",
+            endDate: "August 2022",
+            location: "New York, NY",
+            description: `• Collaborated with a team of engineers to develop a new web application using React and Node.js
+               • Implemented user authentication and authorization using JWT
+               • Optimized database queries to improve application performance
+               • Created unit tests and end-to-end tests using Jest and React Testing Library`,
+          },
+          [workIds[1]]: {
+            position: "Junior Software Developer",
+            company: "XYZ Corp",
+            startDate: "September 2022",
+            endDate: "Present",
+            location: "San Francisco, CA",
+            description: `• Contributed to the development of a microservices architecture using Java and Spring Boot
+               • Integrated third-party APIs to enhance the functionality of the application
+               • Participated in code reviews and provided constructive feedback to peers
+               • Assisted in migrating the application from a monolithic architecture to microservices`,
+          },
         },
       },
     };
