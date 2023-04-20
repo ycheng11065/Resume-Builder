@@ -6,10 +6,20 @@ class Skills extends Component {
     super(props);
 
     this.state = {
-      category: "",
-      skills: {},
-      inputValues: {},
+      category: props.data.category || "",
+      skills: props.data.skills || {},
+      inputValues: props.data.inputValues || {},
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.setState({
+        category: this.props.data.category || "",
+        skills: this.props.data.skills || {},
+        inputValues: this.props.data.inputValues || {},
+      });
+    }
   }
 
   handleCategoryChange = (e) => {
