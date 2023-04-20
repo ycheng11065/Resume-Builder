@@ -41,7 +41,7 @@
 
 .Work-Experience {
     position: relative;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     /* grid: repeat(2, 1fr) / repeat(2, 1fr); */
 }
 
@@ -53,6 +53,7 @@
         "position date"
         "company location"
         "description description";
+    margin-bottom: 0.5rem;
 }
 
 .Work-Position {
@@ -77,6 +78,7 @@
 
 .Work-Description {
     grid-area: description;
+    margin-top: 0.5rem;
 }
 
 pre {
