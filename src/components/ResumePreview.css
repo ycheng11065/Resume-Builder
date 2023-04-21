@@ -53,26 +53,18 @@
 
 .Work-Position {
     width: auto;
-    height:auto;
-    grid-area: position;
+    height: auto;
 }
 
 .Work-Date {
-    grid-area: date;
     text-align: right;
 }
 
-.Work-Company {
-    grid-area: company;
-}
-
 .Work-Location {
-    grid-area: location;
     text-align: right;
 }
 
 .Work-Description {
-    grid-area: description;
     margin-top: 0.5rem;
 }
 

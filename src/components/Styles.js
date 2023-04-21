@@ -38,72 +38,48 @@ export const styles = StyleSheet.create({
         marginTop: "0.5rem",
     },
     workSection: {
-        display: "grid",
-        gridTemplateRows: "auto auto auto",
-        gridTemplateColumns: "auto auto",
-        gridTemplateAreas: '
-            "position date"
-            "company location"
-            "description description"
-        ',
         marginBottom: "0.5rem",
         marginTop: "0.5rem",
-    }
-    
-    .Work-Position {
-        width: auto;
-        height:auto;
-        grid-area: position;
-    }
-    
-    .Work-Date {
-        grid-area: date;
-        text-align: right;
-    }
-    
-    .Work-Company {
-        grid-area: company;
-    }
-    
-    .Work-Location {
-        grid-area: location;
-        text-align: right;
-    }
-    
-    .Work-Description {
-        grid-area: description;
-        margin-top: 0.5rem;
-    }
-    
-    .Project-Section {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .Project-Header {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .Project-Title {
-        display: flex;
-    }
-    
-    .Project-Tech {
-        padding-left: 0.2rem;
-    }
-    
-    .Project-Description {
-        margin-bottom: 0.5rem;
-    }
-    
-    .Skill-Section {
-        display: flex;
-        margin-top: 0.5rem;
-    }
-    
-    .Skill-List {
-        padding-left: 0.4rem;
-    }
-
+    },
+    workHeader: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+    workPosition: {
+        width: "auto",
+        height: "auto",
+    },
+    workDate: {
+        textAlign: "right",
+    },
+    workLocation: {
+        textAlign: "right",
+    },
+    workDescription: {
+        marginTop: "0.5rem",
+    },
+    projectSection: {
+        marginTop: "0.5rem",
+        marginBottom: "0.5rem",
+    },
+    projectHeader: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+    projectTitle: {
+        display: "flex",
+    },
+    projectTech: {
+        paddingLeft: "0.2rem",
+    },
+    projectDescription: {
+        marginBottom: "0.5rem",
+    },
+    skillSection: {
+        display: "flex",
+        marginTop: "0.5rem",
+    },
+    skillList: {
+        paddingLeft: "0.4rem",
+    },
 });
