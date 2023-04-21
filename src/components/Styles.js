@@ -4,7 +4,9 @@ export const styles = StyleSheet.create({
     page: {
         flexDirection: "column",
         backgroundColor: "#F2EECB",
-        padding: "32pt",
+        paddingRight: "32px",
+        paddingLeft: "32px",
+        paddingTop: "25px",
         size: "letter",
     },
     h1: {
@@ -20,11 +22,11 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     h4: {
-        fontSize: "16px",
+        fontSize: "12px",
         fontWeight: "bold",
     },
     p: {
-        fontSize: "16px",
+        fontSize: "12px",
     },
     resumePreview: {
         backgroundColor: "#F2EECB",  

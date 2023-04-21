@@ -52,26 +52,26 @@ class ResumePreviewPDF extends Component {
           {Object.keys(workExperience).length > 0 &&
             Object.keys(workExperience.inputValues).length > 0 &&
             workExperience.items.length > 0 && (
-              <View style={styles.WorkExperience}>
-                <Text style={{ ...styles.SectionTitle, ...styles.h3 }}>WORK EXPERIENCE</Text>
+              <View style={styles.workExperience}>
+                <Text style={{ ...styles.sectionTitle, ...styles.h3 }}>WORK EXPERIENCE</Text>
                 {Object.entries(workExperience.inputValues).map(
                   ([workId, workInfo]) => (
-                    <View style={styles.WorkSection} key={workId}>
-                      <View style={styles.WorkHeader}>
-                        <Text style={{ ...styles.WorkPosition, ...styles.h4 }}>
+                    <View style={styles.workSection} key={workId}>
+                      <View style={styles.workHeader}>
+                        <Text style={{ ...styles.workPosition, ...styles.h4 }}>
                             {workInfo.position}
                         </Text>
-                        <Text style={{ ...styles.WorkDate, ...styles.h4 }}>
+                        <Text style={{ ...styles.workDate, ...styles.h4 }}>
                             {workInfo.startDate} - {workInfo.endDate}
                         </Text>
                       </View>
-                      <View style={styles.WorkHeader}>
-                        <Text style={{ ...styles.WorkCompany, ...styles.h4 }}>{workInfo.company}</Text>
-                        <Text style={{ ...styles.WorkLocation, ...styles.h4 }}>
+                      <View style={styles.workHeader}>
+                        <Text style={{ ...styles.workCompany, ...styles.h4 }}>{workInfo.company}</Text>
+                        <Text style={{ ...styles.workLocation, ...styles.h4 }}>
                             {workInfo.location}
                         </Text>
                       </View>
-                      <Text style={{ ...styles.WorkDescription, ...styles.p }}>
+                      <Text style={{ ...styles.workDescription, ...styles.p }}>
                         {workInfo.description}
                       </Text>
                     </View>
@@ -84,24 +84,24 @@ class ResumePreviewPDF extends Component {
             Object.keys(projects.inputValues).length > 0 &&
             projects.items.length > 0 && (
               <View style={styles.TechnicalProjects}>
-                <Text style={{ ...styles.SectionTitle, ...styles.h3 }}>TECHNICAL PROJECTS</Text>
+                <Text style={{ ...styles.sectionTitle, ...styles.h3 }}>TECHNICAL PROJECTS</Text>
                 {Object.entries(projects.inputValues).map(
                   ([projectId, projectInfo]) => (
-                    <View style={styles.ProjectSection} key={projectId}>
-                      <View style={styles.ProjectHeader}>
-                        <View style={styles.ProjectTitle}>
+                    <View style={styles.projectSection} key={projectId}>
+                      <View style={styles.projectHeader}>
+                        <View style={styles.projectTitle}>
                           <Text style={{ ...styles.ProjectName, ...styles.h4 }}>
                             {projectInfo.name} |{" "}
                           </Text>
-                          <Text style={{ ...styles.ProjectTech, ...styles.p }}>
+                          <Text style={{ ...styles.projectTech, ...styles.p }}>
                             {projectInfo.technology}
                           </Text>
                         </View>
-                        <Text style={{ ...styles.ProjectDate, ...styles.h4 }}>
+                        <Text style={styles.h4 }>
                           {projectInfo.completionDate}
                         </Text>
                       </View>
-                      <Text style={{ ...styles.ProjectDescription, ...styles.p }}>
+                      <Text style={{ ...styles.projectDescription, ...styles.p }}>
                         {projectInfo.description}
                       </Text>
                     </View>
@@ -113,11 +113,11 @@ class ResumePreviewPDF extends Component {
           {Object.keys(skills).length > 0 &&
             Object.keys(skills.skills).length > 0 && (
               <View style={styles.TechnicalSkills}>
-                <Text style={{ ...styles.SectionTitle, ...styles.h3 }}>TECHNICAL SKILLS</Text>
+                <Text style={{ ...styles.sectionTitle, ...styles.h3 }}>TECHNICAL SKILLS</Text>
                 {Object.entries(skills.skills).map(([category, skillList]) => (
-                  <View style={styles.SkillSection} key={category}>
-                    <Text style={{ ...styles.SkillCategory, ...styles.h4 }}>{category}:</Text>
-                    <Text style={{ ...styles.SkillList, ...styles.p }}>
+                  <View style={styles.skillSection} key={category}>
+                    <Text style={{ ...styles.skillCategory, ...styles.h4 }}>{category}:</Text>
+                    <Text style={{ ...styles.skillList, ...styles.p }}>
                         {Object.entries(skillList)
                           .map(([skillId, skill]) => skill)
                           .join(", ")}
