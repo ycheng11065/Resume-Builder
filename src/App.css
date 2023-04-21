@@ -1,8 +1,29 @@
+@font-face {
+    font-family: "CMU";
+    src: url("./fonts/cmunorm.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CMU";
+    src: url("./fonts/cmunbx.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CMU";
+    src: url("./fonts/cmunti.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "CMU", "Quicksand", sans-serif;
 }
 
 :root {
