@@ -5,9 +5,9 @@ export const styles = StyleSheet.create({
         fontFamily: "Quicksand",
         flexDirection: "column",
         backgroundColor: "#F2EECB",
-        paddingRight: "32px",
-        paddingLeft: "32px",
-        paddingTop: "25px",
+        paddingRight: "24pt",
+        paddingLeft: "24pt",
+        paddingTop: "15pt",
         size: "letter",
     },
     h1: {

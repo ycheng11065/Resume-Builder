@@ -75,8 +75,7 @@ class App extends Component {
             description:
               "• Developed an online marketplace platform for buying and selling goods\n" +
               "• Implemented user authentication and authorization with JWT\n" +
-              "• Designed a RESTful API to handle user and product data\n" +
-              "• Utilized Redux for efficient state management`\n",
+              "• Designed a RESTful API to handle user and product data\n",
           },
           [projectIds[1]]: {
             name: "Real-time Chat Application",
@@ -85,8 +84,7 @@ class App extends Component {
             description:
               "• Created a real-time chat application using \n" +
               "• Implemented private and group chat functionality\n" +
-              "• Used Socket.IO for seamless communication between server and clients\n" +
-              "• Designed a responsive user interface using Material-UI`",
+              "• Used Socket.IO for seamless communication between server and clients\n",
           },
           [projectIds[2]]: {
             name: "Weather Forecast Web App",
