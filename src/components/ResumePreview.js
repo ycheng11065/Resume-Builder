@@ -10,14 +10,14 @@ class ResumePreview extends Component {
       <div className="Resume-Preview">
         <div className="Resume-Preview-Container">
           <div className="Personal-Profile">
-            <h1 id="Name">
+            <h1 className="Profile-Name">
               {personalInfo.firstName} {personalInfo.lastName}
             </h1>
-            <h4>
+            <h4 className="Profile-Title">
               {personalInfo.major ? personalInfo.major + " Major" : ""}
               {personalInfo.yearLevel ? ", " + personalInfo.yearLevel + " year" : ""}
             </h4>
-            <h4>
+            <h4 className="Profile-Contact">
               {personalInfo.phone}
               {personalInfo.email ? " ⋄ " + personalInfo.email : ""}
               {personalInfo.linkedin ? " ⋄ " + personalInfo.linkedin : ""}
@@ -32,12 +32,12 @@ class ResumePreview extends Component {
                 <h3 className="Section-Title">EDUCATION</h3>
                 {Object.entries(education.inputValues).map(
                   ([school, schoolInfo]) => (
-                    <div id="Education-Info" key={school}>
-                      <h4>
+                    <div className="Education-Section" key={school}>
+                      <h4 className="Education-Info"> 
                         {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
                         {personalInfo.major} Major
                       </h4>
-                      <h4>
+                      <h4 className="Education-Date">
                         {schoolInfo.startDate} - {schoolInfo.endDate}
                       </h4>
                     </div>
