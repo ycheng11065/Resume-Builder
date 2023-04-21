@@ -58,16 +58,20 @@ class ResumePreviewPDF extends Component {
                 {Object.entries(workExperience.inputValues).map(
                   ([workId, workInfo]) => (
                     <View style={styles.WorkSection} key={workId}>
-                      <Text style={styles.WorkPosition}>
-                        {workInfo.position}
-                      </Text>
-                      <Text style={styles.WorkDate}>
-                        {workInfo.startDate} - {workInfo.endDate}
-                      </Text>
-                      <Text style={styles.WorkCompany}>{workInfo.company}</Text>
-                      <Text style={styles.WorkLocation}>
-                        {workInfo.location}
-                      </Text>
+                      <View style={styles.WorkHeader}>
+                        <Text style={styles.WorkPosition}>
+                            {workInfo.position}
+                        </Text>
+                        <Text style={styles.WorkDate}>
+                            {workInfo.startDate} - {workInfo.endDate}
+                        </Text>
+                      </View>
+                      <View style={styles.WorkHeader}>
+                        <Text style={styles.WorkCompany}>{workInfo.company}</Text>
+                        <Text style={styles.WorkLocation}>
+                            {workInfo.location}
+                        </Text>
+                      </View>
                       <Text style={styles.WorkDescription}>
                         {workInfo.description}
                       </Text>
