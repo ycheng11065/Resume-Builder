@@ -10,7 +10,7 @@ class ResumePreviewPDF extends Component {
     return (
       <Document>
         <Page size="letter" style={styles.page}>
-          <View style={styles.PersonalProfile}>
+          <View style={styles.personalProfile}>
             <Text style={styles.h1}>
               {personalInfo.firstName} {personalInfo.lastName}
             </Text>
@@ -31,16 +31,16 @@ class ResumePreviewPDF extends Component {
           {Object.keys(education).length > 0 &&
             Object.keys(education.inputValues).length > 0 &&
             education.items.length > 0 && (
-              <View style={styles.Education}>
-                <Text style={{ ...styles.SectionTitle, ...styles.h3 }}>EDUCATION</Text>
+              <View style={styles.education}>
+                <Text style={{ ...styles.sectionTitle, ...styles.h3 }}>EDUCATION</Text>
                 {Object.entries(education.inputValues).map(
                   ([school, schoolInfo]) => (
-                    <View style={styles.EducationSection} key={school}>
-                      <Text style={{ ...styles.EducationInfo, ...styles.h4 }}>
+                    <View style={styles.educationSection} key={school}>
+                      <Text style={styles.h4 }>
                         {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
                         {personalInfo.major} Major
                       </Text>
-                      <Text style={{ ...styles.EducationDate, ...styles.h4 }}>
+                      <Text style={styles.h4 }>
                         {schoolInfo.startDate} - {schoolInfo.endDate}
                       </Text>
                     </View>
@@ -132,3 +132,5 @@ class ResumePreviewPDF extends Component {
     );
   }
 }
+
+export default ResumePreviewPDF;

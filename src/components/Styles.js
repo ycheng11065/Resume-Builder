@@ -2,6 +2,9 @@ import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
     page: {
+        flexDirection: "column",
+        backgroundColor: "#F2EECB",
+        padding: "32pt",
         size: "letter",
     },
     h1: {

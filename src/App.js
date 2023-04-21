@@ -7,6 +7,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import ResumePreview from "./components/ResumePreview";
+import ResumePDF from "./components/ResumePDF";
 
 
 class App extends Component {
@@ -185,6 +186,15 @@ class App extends Component {
         <div>
           <h1>Resume Builder</h1>
           <button onClick={() => this.generateSample()}>Generate Sample</button>
+          <div>
+            <ResumePDF
+              personalInfo={this.state.personalInfo}
+              education={this.state.education}
+              projects={this.state.projects}
+              skills={this.state.skills}
+              workExperience={this.state.workExperience}
+            />
+          </div>
           {/* <button onClick={() => this.saveAsPDF()}>Save as PDF</button> */}
           <PersonalInfo
             onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
