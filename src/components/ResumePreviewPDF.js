@@ -24,9 +24,9 @@ class ResumePreviewPDF extends Component {
             </Text>
             <Text style={styles.h4}>
               {personalInfo.phone}
-              {personalInfo.email ? " ⋄ " + personalInfo.email : ""}
-              {personalInfo.linkedin ? " ⋄ " + personalInfo.linkedin : ""}
-              {personalInfo.github ? " ⋄ " + personalInfo.github : ""}
+              {personalInfo.email ? " • " + personalInfo.email : ""}
+              {personalInfo.linkedin ? " • " + personalInfo.linkedin : ""}
+              {personalInfo.github ? " • " + personalInfo.github : ""}
             </Text>
           </View>
 

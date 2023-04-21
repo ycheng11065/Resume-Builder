@@ -11,23 +11,23 @@ export const styles = StyleSheet.create({
         size: "letter",
     },
     h1: {
-        fontSize: "24pt",
+        fontSize: "17pt",
         fontWeight: "bold",
     },
     h2: {
-        fontSize: "18pt",
+        fontSize: "14pt",
         fontWeight: "bold",
     },
     h3: {
-        fontSize: "13.5pt",
+        fontSize: "12pt",
         fontWeight: "bold",
     },
     h4: {
-        fontSize: "12pt",
+        fontSize: "11pt",
         fontWeight: "bold",
     },
     p: {
-        fontSize: "12pt",
+        fontSize: "11pt",
     },
     resumePreview: {
         backgroundColor: "#F2EECB",  
@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
         flexDirection: "column",
     },
     sectionTitle: {
-        marginTop: "6pt",
+        marginTop: "5pt",
         textAlign: "left",
         borderBottom: "2px solid black",
     },
@@ -59,7 +59,7 @@ export const styles = StyleSheet.create({
     },
     educationSection: {
         marginTop: "6pt",
-        marginBottom: "6pt",
+        marginBottom: "4pt",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -86,11 +86,11 @@ export const styles = StyleSheet.create({
         textAlign: "right",
     },
     workDescription: {
-        marginTop: "6pt",
+        marginTop: "2pt",
         marginLeft: "10pt",
     },
     projectSection: {
-        marginTop: "6pt",
+        marginTop: "4pt",
     },
     projectHeader: {
         display: "flex",
@@ -112,7 +112,7 @@ export const styles = StyleSheet.create({
     skillSection: {
         display: "flex",
         flexDirection: "row",
-        marginTop: "6pt",
+        marginTop: "4pt",
     },
     skillList: {
         fontStyle: "italic",
