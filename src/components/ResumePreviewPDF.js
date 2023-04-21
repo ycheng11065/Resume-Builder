@@ -95,7 +95,7 @@ class ResumePreviewPDF extends Component {
                           <Text style={{ ...styles.ProjectName, ...styles.h4 }}>
                             {projectInfo.name} |{" "}
                           </Text>
-                          <Text style={{ ...styles.projectTech, ...styles.p }}>
+                          <Text style={{ ...styles.projectTech, ...styles.p}}>
                             {projectInfo.technology}
                           </Text>
                         </View>

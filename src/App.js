@@ -122,7 +122,7 @@ class App extends Component {
           },
           Tools: {
             [skillIds[7]]: "Git/Github",
-            [skillIds[8]]: "Visual Studio  Code",
+            [skillIds[8]]: "Visual Studio Code",
             [skillIds[9]]: "JetBrains Suite",
           },
         },

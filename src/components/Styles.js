@@ -2,7 +2,7 @@ import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
     page: {
-        fontFamily: "Quicksand",
+        fontFamily: "CMU",
         flexDirection: "column",
         backgroundColor: "#F2EECB",
         paddingRight: "24pt",
@@ -53,7 +53,6 @@ export const styles = StyleSheet.create({
         marginTop: "6pt",
         textAlign: "left",
         borderBottom: "2px solid black",
-        // paddingBottom: "6pt",
     },
     education: {
         marginTop: "6pt",
@@ -88,10 +87,10 @@ export const styles = StyleSheet.create({
     },
     workDescription: {
         marginTop: "6pt",
+        marginLeft: "10pt",
     },
     projectSection: {
         marginTop: "6pt",
-        // marginBottom: "6pt",
     },
     projectHeader: {
         display: "flex",
@@ -103,10 +102,12 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
     },
     projectTech: {
+        fontStyle: "italic",
         paddingLeft: "3pt",
     },
     projectDescription: {
         marginBottom: "6pt",
+        marginLeft: "10pt",
     },
     skillSection: {
         display: "flex",
@@ -114,6 +115,7 @@ export const styles = StyleSheet.create({
         marginTop: "6pt",
     },
     skillList: {
+        fontStyle: "italic",
         paddingLeft: "5pt",
     },
 });
