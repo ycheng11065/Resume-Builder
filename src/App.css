@@ -23,13 +23,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "CMU", "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 :root {
     --resume-preview-width: 50rem;
-}
-
-pre {
-    white-space: pre-wrap;
 }
