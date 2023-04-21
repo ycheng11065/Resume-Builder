@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Document, Page, Text, View } from "@react-pdf/renderer";
 import { styles } from "./Styles";
+import "../utils/RegisterFonts";
+
 
 class ResumePreviewPDF extends Component {
   render() {

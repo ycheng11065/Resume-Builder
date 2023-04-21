@@ -2,6 +2,7 @@ import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
     page: {
+        fontFamily: "Quicksand",
         flexDirection: "column",
         backgroundColor: "#F2EECB",
         paddingRight: "32px",

@@ -9,7 +9,6 @@ import Skills from "./components/Skills";
 import ResumePreview from "./components/ResumePreview";
 import ResumePDF from "./components/ResumePDF";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,6 @@ class App extends Component {
       projects: {},
       skills: {},
       workExperience: {},
-      generatedPDF: false,
     };
   }
 
@@ -84,7 +82,7 @@ class App extends Component {
             name: "Real-time Chat Application",
             technology: "React, Socket.IO, Node.js, Express",
             completionDate: "January 2022",
-            description: 
+            description:
               "• Created a real-time chat application using \n" +
               "• Implemented private and group chat functionality\n" +
               "• Used Socket.IO for seamless communication between server and clients\n" +
@@ -94,7 +92,7 @@ class App extends Component {
             name: "Weather Forecast Web App",
             technology: "Vue.js, Vuex, OpenWeatherMap API",
             completionDate: "August 2021",
-            description: 
+            description:
               "• Developed a weather forecast web app that displays current weather and 7-day forecast\n" +
               "• Integrated OpenWeatherMap API to fetch real-time weather data\n" +
               "• Utilized Vuex for centralized state management",
@@ -103,7 +101,7 @@ class App extends Component {
             name: "Task Management System",
             technology: "Angular, Firebase, Firestore",
             completionDate: "April 2021",
-            description: 
+            description:
               "• Built a task management system to help users organize their tasks\n" +
               "• Implemented CRUD operations for tasks and projects\n" +
               "• Utilized Firebase for user authentication and Firestore for data storage",
@@ -174,10 +172,6 @@ class App extends Component {
     this.setState({
       [component]: newData,
     });
-  };
-
-  saveAsPDF = () => {
-    this.setState({ generatedPDF: true });
   };
 
   render() {
