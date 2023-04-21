@@ -1,6 +1,28 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
+    page: {
+        size: "letter",
+    },
+    h1: {
+        fontSize: "32px",
+        fontWeight: "bold",
+    },
+    h2: {
+        fontSize: "24px",
+        fontWeight: "bold",
+    },
+    h3: {
+        fontSize: "18px",
+        fontWeight: "bold",
+    },
+    h4: {
+        fontSize: "16px",
+        fontWeight: "bold",
+    },
+    p: {
+        fontSize: "16px",
+    },
     resumePreview: {
         backgroundColor: "#F2EECB",  
         width: "50rem",

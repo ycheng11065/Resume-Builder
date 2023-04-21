@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
+import { styles } from "./Styles";
 
 const styles = StyleSheet.create({});
 
@@ -10,7 +11,7 @@ class ResumePreviewPDF extends Component {
 
     return (
       <Document>
-        <Page size="A4" style={styles.page}>
+        <Page size="letter" style={styles.page}>
           <View style={styles.PersonalProfile}>
             <Text style={styles.h1}>
               {personalInfo.firstName} {personalInfo.lastName}
