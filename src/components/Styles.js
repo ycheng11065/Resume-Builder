@@ -10,23 +10,23 @@ export const styles = StyleSheet.create({
         size: "letter",
     },
     h1: {
-        fontSize: "32px",
+        fontSize: "24pt",
         fontWeight: "bold",
     },
     h2: {
-        fontSize: "24px",
+        fontSize: "18pt",
         fontWeight: "bold",
     },
     h3: {
-        fontSize: "18px",
+        fontSize: "13.5pt",
         fontWeight: "bold",
     },
     h4: {
-        fontSize: "12px",
+        fontSize: "12pt",
         fontWeight: "bold",
     },
     p: {
-        fontSize: "12px",
+        fontSize: "12pt",
     },
     resumePreview: {
         backgroundColor: "#F2EECB",  
@@ -51,25 +51,29 @@ export const styles = StyleSheet.create({
     sectionTitle: {
         textAlign: "left",
         borderBottom: "2px solid black",
+        // paddingBottom: "6pt",
     },
     education: {
-        marginTop: "0.5rem",
+        marginTop: "12pt",
     },
     educationSection: {
-        marginTop: "0.5rem",
+        marginTop: "6pt",
+        marginBottom: "6pt",
         display: "flex",
+        flexDirection: "row",
         justifyContent: "space-between",
     },
     workExperience: {
         position: "relative",
-        marginTop: "0.5rem",
+        // marginTop: "0.5rem",
     },
     workSection: {
-        marginBottom: "0.5rem",
-        marginTop: "0.5rem",
+        marginBottom: "6pt",
+        marginTop: "6pt",
     },
     workHeader: {
         display: "flex",
+        flexDirection: "row",
         justifyContent: "space-between",
     },
     workPosition: {
@@ -83,7 +87,7 @@ export const styles = StyleSheet.create({
         textAlign: "right",
     },
     workDescription: {
-        marginTop: "0.5rem",
+        marginTop: "6pt",
     },
     projectSection: {
         marginTop: "0.5rem",
@@ -91,6 +95,7 @@ export const styles = StyleSheet.create({
     },
     projectHeader: {
         display: "flex",
+        flexDirection: "row",
         justifyContent: "space-between",
     },
     projectTitle: {
@@ -104,6 +109,7 @@ export const styles = StyleSheet.create({
     },
     skillSection: {
         display: "flex",
+        flexDirection: "row",
         marginTop: "0.5rem",
     },
     skillList: {

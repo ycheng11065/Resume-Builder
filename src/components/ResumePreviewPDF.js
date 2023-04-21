@@ -36,11 +36,11 @@ class ResumePreviewPDF extends Component {
                 {Object.entries(education.inputValues).map(
                   ([school, schoolInfo]) => (
                     <View style={styles.educationSection} key={school}>
-                      <Text style={styles.h4 }>
+                      <Text style={styles.h4}>
                         {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
                         {personalInfo.major} Major
                       </Text>
-                      <Text style={styles.h4 }>
+                      <Text style={styles.h4}>
                         {schoolInfo.startDate} - {schoolInfo.endDate}
                       </Text>
                     </View>
