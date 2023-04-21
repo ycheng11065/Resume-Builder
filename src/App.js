@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import ResumePreview from "./components/ResumePreview";
 
+
 class App extends Component {
   constructor(props) {
     super(props);

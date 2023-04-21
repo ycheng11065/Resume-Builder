@@ -1,19 +1,21 @@
 import React, { Component } from "react";
-import { Document, Page } from "react-pdf";
-import ResumePreview from "./ResumePreview";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import ResumePreviewPDF from "./ResumePreviewPDF";
 
 class ResumePDF extends Component {
  
   render() {
-    const { personalInfo, education, workExperience, projects, skills } =
-      this.props;
-
     return (
-      <document>
-        <page>
-          <ResumePreview />
-        </page>
-      </document>
+      <div>
+        <PDFDownloadLink
+            document={<ResumePreviewPDF {...this.props}/>}
+            fileName="resume.pdf"
+        >
+            {({ blob, url, loading, error }) =>
+                loading ? "Loading document..." : "Download PDF"
+            }
+        </PDFDownloadLink>
+      </div>
     );
   }
 }
