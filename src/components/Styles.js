@@ -49,12 +49,13 @@ export const styles = StyleSheet.create({
         flexDirection: "column",
     },
     sectionTitle: {
+        marginTop: "6pt",
         textAlign: "left",
         borderBottom: "2px solid black",
         // paddingBottom: "6pt",
     },
     education: {
-        marginTop: "12pt",
+        marginTop: "6pt",
     },
     educationSection: {
         marginTop: "6pt",
@@ -68,7 +69,7 @@ export const styles = StyleSheet.create({
         // marginTop: "0.5rem",
     },
     workSection: {
-        marginBottom: "6pt",
+        // marginBottom: "6pt",
         marginTop: "6pt",
     },
     workHeader: {
@@ -90,8 +91,8 @@ export const styles = StyleSheet.create({
         marginTop: "6pt",
     },
     projectSection: {
-        marginTop: "0.5rem",
-        marginBottom: "0.5rem",
+        marginTop: "6pt",
+        // marginBottom: "6pt",
     },
     projectHeader: {
         display: "flex",
@@ -100,6 +101,7 @@ export const styles = StyleSheet.create({
     },
     projectTitle: {
         display: "flex",
+        flexDirection: "row",
     },
     projectTech: {
         paddingLeft: "0.2rem",
