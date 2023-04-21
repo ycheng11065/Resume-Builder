@@ -42,15 +42,13 @@
 }
 
 .Work-Section {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto;
-    grid-template-areas:
-        "position date"
-        "company location"
-        "description description";
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+}
+
+.Work-Header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .Work-Position {

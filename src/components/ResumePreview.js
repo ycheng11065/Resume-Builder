@@ -54,12 +54,16 @@ class ResumePreview extends Component {
                 {Object.entries(workExperience.inputValues).map(
                   ([workId, workInfo]) => (
                     <div className="Work-Section" key={workId}>
-                      <h4 className="Work-Position">{workInfo.position}</h4>
-                      <h4 className="Work-Date">
-                        {workInfo.startDate} - {workInfo.endDate}
-                      </h4>
-                      <h4 className="Work-Company">{workInfo.company}</h4>
-                      <h4 className="Work-Location">{workInfo.location}</h4>
+                      <div className="Work-Header">
+                        <h4 className="Work-Position">{workInfo.position}</h4>
+                        <h4 className="Work-Date">
+                          {workInfo.startDate} - {workInfo.endDate}
+                        </h4>
+                      </div>
+                      <div className="Work-Header">
+                        <h4 className="Work-Company">{workInfo.company}</h4>
+                        <h4 className="Work-Location">{workInfo.location}</h4>
+                      </div>
                       <pre className="Work-Description">{workInfo.description}</pre>
                     </div>
                   )
