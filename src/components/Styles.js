@@ -66,10 +66,8 @@ export const styles = StyleSheet.create({
     },
     workExperience: {
         position: "relative",
-        // marginTop: "0.5rem",
     },
     workSection: {
-        // marginBottom: "6pt",
         marginTop: "6pt",
     },
     workHeader: {
@@ -104,17 +102,17 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
     },
     projectTech: {
-        paddingLeft: "0.2rem",
+        paddingLeft: "3pt",
     },
     projectDescription: {
-        marginBottom: "0.5rem",
+        marginBottom: "6pt",
     },
     skillSection: {
         display: "flex",
         flexDirection: "row",
-        marginTop: "0.5rem",
+        marginTop: "6pt",
     },
     skillList: {
-        paddingLeft: "0.4rem",
+        paddingLeft: "5pt",
     },
 });
