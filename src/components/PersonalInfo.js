@@ -50,9 +50,9 @@ class PersonalInfo extends Component {
     } = this.state;
 
     return (
-      <div>
+      <div className="Profile-Root">
         <h2 className="Title">Personal Info</h2>
-        <div className="Personal-Info-Inputs">
+        <div className="Profile-Inputs">
           <input
             className="First-Name"
             type="text"

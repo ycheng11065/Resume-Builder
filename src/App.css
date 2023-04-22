@@ -31,5 +31,41 @@
 }
 
 .App-Root {
-    display: flex;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        " header header "
+        " preview input";
+}
+
+.App-Header {
+    border: 2px solid blue;
+    grid-area: header;
+}
+
+.App-Preview {
+    border: 2px solid red;
+    grid-area: preview;
+}
+
+
+.App-Input {
+    grid-area: input;
+    width: 100%;
+    border: 2px solid green;
+}
+
+@media (min-width: 1280px) {
+    * {
+        font-size: 13px;
+    }
+}
+
+
+@media (min-width: 1912px) {
+    * {
+        font-size: 20px;
+
+    }
 }

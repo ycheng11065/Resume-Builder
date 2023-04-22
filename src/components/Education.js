@@ -1,3 +1,4 @@
+import "./Education.css";
 import React from "react";
 import DynamicComponents from "./DynamicComponents";
 
@@ -17,7 +18,7 @@ class Education extends DynamicComponents {
 
   renderInputs(schoolId, inputValues, handleChange) {
     return (
-      <div>
+      <div C>
         <input
           type="text"
           name="schoolName"

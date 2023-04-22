@@ -175,6 +175,19 @@ class App extends Component {
   render() {
     return (
       <div className="App-Root">
+        <div className="App-Header">
+        <h1>Resume Builder</h1>
+            <button onClick={() => this.generateSample()}>Generate Sample</button>
+            <div>
+              <ResumePDF
+                personalInfo={this.state.personalInfo}
+                education={this.state.education}
+                projects={this.state.projects}
+                skills={this.state.skills}
+                workExperience={this.state.workExperience}
+              />
+            </div>
+        </div>
         <div className="App-Preview">
           <ResumePreview
             personalInfo={this.state.personalInfo}
@@ -185,17 +198,6 @@ class App extends Component {
           />
         </div>
         <div className="App-Input">
-          <h1>Resume Builder</h1>
-          <button onClick={() => this.generateSample()}>Generate Sample</button>
-          <div>
-            <ResumePDF
-              personalInfo={this.state.personalInfo}
-              education={this.state.education}
-              projects={this.state.projects}
-              skills={this.state.skills}
-              workExperience={this.state.workExperience}
-            />
-          </div>
           <PersonalInfo
             onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
             data={this.state.personalInfo}

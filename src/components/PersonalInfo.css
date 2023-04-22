@@ -1,0 +1,22 @@
+/* input {
+    font-size: 1.5rem;
+} */
+.Profile-Root *{
+    font-size: 1.5rem;
+}
+
+.Profile-Root {
+    margin-top: 2rem;
+    width: 100%;
+    border: 2px solid red;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile-Inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
