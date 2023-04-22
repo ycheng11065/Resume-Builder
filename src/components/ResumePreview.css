@@ -1,3 +1,20 @@
+h1 {
+    font-size: 1.4228rem;
+}
+
+h2 {
+    font-size: 1.182rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 0.923rem;
+}
+
+
 pre {
     white-space: pre-wrap;
 }
@@ -24,34 +41,35 @@ pre {
 }
 
 .Personal-Profile {
+    margin-top: 0.99975rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 .Section-Title {
+    margin-top: 0.33;
     text-align: left;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid black;
 }
 
 .Education {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
 }
 
 .Education-Section {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.266rem;
     display: flex;
     justify-content: space-between;
 }
 
 .Work-Experience {
     position: relative;
-    margin-top: 0.5rem;
 }
 
 .Work-Section {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
 }
 
 .Work-Header {
@@ -73,12 +91,16 @@ pre {
 }
 
 .Work-Description {
-    margin-top: 0.5rem;
+    margin-top: 0.133rem;
+    margin-left: 1rem;
+}
+
+.Technical-Projects {
+    margin-top: 0.4rem;
 }
 
 .Project-Section {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.266rem;
 }
 
 .Project-Header {
@@ -96,7 +118,7 @@ pre {
 
 .Project-Description {
     margin-bottom: 0.4rem;
-    margin-left: 0.66rem; 
+    margin-left: 0.9rem; 
 }
 
 .Skill-Section {

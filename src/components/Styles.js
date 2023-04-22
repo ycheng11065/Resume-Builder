@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
     page: {
         fontFamily: "CMU",
         flexDirection: "column",
-        backgroundColor: "#F2EECB",
+        // backgroundColor: "#F2EECB",
         paddingRight: "24pt",
         paddingLeft: "24pt",
         paddingTop: "15pt",
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
     },
     workDescription: {
         marginTop: "2pt",
-        marginLeft: "10pt",
+        marginLeft: "12pt",
     },
     projectSection: {
         marginTop: "4pt",
