@@ -1,3 +1,4 @@
+import "./Project.css"
 import React from "react";
 import DynamicComponents from "./DynamicComponents";
 
@@ -17,36 +18,42 @@ class Projects extends DynamicComponents {
 
   renderInputs(projectId, inputValues, handleChange) {
     return (
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Project Name"
-          value={inputValues[projectId]["name"]}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="technology"
-          placeholder="Technology used"
-          value={inputValues[projectId]["technology"]}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="completionDate"
-          placeholder="Completion Date"
-          value={inputValues[projectId]["completionDate"]}
-          onChange={handleChange}
-        />
-        <textarea
-          name="description"
-          placeholder="Description"
-          value={inputValues[projectId]["description"]}
-          onChange={handleChange}
-          rows="4"
-          cols="50"
-        />
+      <div className="Project-Root">
+        <div className="Row1">
+          <input
+            className="Project-Name"
+            type="text"
+            name="name"
+            placeholder="Project Name"
+            value={inputValues[projectId]["name"]}
+            onChange={handleChange}
+          />
+          <input
+            className="Project-Tech"
+            type="text"
+            name="technology"
+            placeholder="Technology used"
+            value={inputValues[projectId]["technology"]}
+            onChange={handleChange}
+          />
+          <input
+            className="Project-Date"
+            type="text"
+            name="completionDate"
+            placeholder="Completion Date"
+            value={inputValues[projectId]["completionDate"]}
+            onChange={handleChange}
+          />
+          <textarea
+            className="Project-Description"
+            name="description"
+            placeholder="Description"
+            value={inputValues[projectId]["description"]}
+            onChange={handleChange}
+            rows="4"
+            cols="50"
+          />
+        </div>
       </div>
     );
   }
