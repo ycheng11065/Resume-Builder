@@ -44,6 +44,8 @@ class Projects extends DynamicComponents {
             value={inputValues[projectId]["completionDate"]}
             onChange={handleChange}
           />
+        </div>
+        <div className="Row2">
           <textarea
             className="Project-Description"
             name="description"

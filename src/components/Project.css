@@ -1,1 +1,15 @@
-.Row
+.Project-Root textarea {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Row1 {
+    display: flex;
+    gap: 2rem;
+}
+
+.Row2 {
+    margin-top: 1rem;
+}
