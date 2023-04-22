@@ -1,7 +1,6 @@
 .Profile-Root {
     margin-top: 2rem;
     width: 100%;
-    border: 2px solid red;
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -9,7 +8,6 @@
 }
 
 .Profile-Inputs {
-    border: 2px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;

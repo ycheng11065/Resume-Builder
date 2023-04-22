@@ -1,0 +1,39 @@
+.Work-Input input{
+    text-align: left;
+}
+
+.Work-Input textarea {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.First-Row {
+    display: flex;
+    gap: 2rem;
+}
+
+.Second-Row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.Third-Row {
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+}
+
+.Work-Start-Date {
+    flex: 1;
+}
+
+.Work-Location {
+    text-align: left;
+    flex: 1;
+}
+.Work-End-Date {
+    flex: 1;
+}
