@@ -1,0 +1,10 @@
+.Component-Root {
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Component-Section {
+    /* border: 4px solid black; */
+}

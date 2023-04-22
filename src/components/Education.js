@@ -18,8 +18,9 @@ class Education extends DynamicComponents {
 
   renderInputs(schoolId, inputValues, handleChange) {
     return (
-      <div C>
+      <div className="Education-Root">
         <input
+          className= "Education-Name"
           type="text"
           name="schoolName"
           placeholder="School Name"
@@ -27,6 +28,7 @@ class Education extends DynamicComponents {
           onChange={handleChange}
         />
         <input
+          className= "Education-Degree"
           type="text"
           name="degree"
           placeholder="Degree"
@@ -34,6 +36,7 @@ class Education extends DynamicComponents {
           onChange={handleChange}
         />
         <input
+          className= "Education-Date-Start"
           type="text"
           name="startDate"
           placeholder="Start date"
@@ -41,6 +44,7 @@ class Education extends DynamicComponents {
           onChange={handleChange}
         />
         <input
+          className= "Education-Date-End"
           type="text"
           name="endDate"
           placeholder="End Date"

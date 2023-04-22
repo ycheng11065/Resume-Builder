@@ -1,3 +1,4 @@
+import "./DynamicComponents.css";
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -70,15 +71,17 @@ class DynamicComponents extends Component {
     const { items, inputValues } = this.state;
 
     return (
-      <div>
-        <h2>{this.title}</h2>
-        <button onClick={this.addItem}>Add {this.itemName}</button>
-        {items.map((itemId) => (
-          <div key={itemId}>
-            {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
-            <button onClick={() => this.handleDelete(itemId)}>Delete</button>
-          </div>
-        ))}
+      <div className="Component-Root">
+        <h2 className="Component-Title">{this.title}</h2>
+        <div className="Component-Section">
+          <button className="Component-Add" onClick={this.addItem}>Add {this.itemName}</button>
+          {items.map((itemId) => (
+            <div key={itemId}>
+              {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
+              <button className="Component-Delete" onClick={() => this.handleDelete(itemId)}>Delete</button>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

@@ -1,0 +1,10 @@
+.Education-Root * {
+    font-size: 1.5rem;
+}
+
+.Education-Root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+
+}
