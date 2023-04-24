@@ -10,7 +10,6 @@ import ResumePreview from "./components/ResumePreview";
 import ResumePDF from "./components/ResumePDF";
 import ButtonManager from "./components/ButtonManager";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,6 +20,11 @@ class App extends Component {
       projects: {},
       skills: {},
       workExperience: {},
+      personalInfoView: true,
+      educationView: false,
+      projectsView: false,
+      skillsView: false,
+      workExperienceView: false,
     };
   }
 
@@ -174,21 +178,31 @@ class App extends Component {
     });
   };
 
+  handleButtonClick = (buttonType) => {
+    this.setState({ 
+      personalInfoView: buttonType === "profile",
+      educationView: buttonType === "education",
+      workExperienceView: buttonType === "work",
+      projectsView: buttonType === "project",
+      skillsView: buttonType === "skill",
+    });
+  };
+
   render() {
     return (
       <div className="App-Root">
         <div className="App-Header">
-        <h1>Resume Builder</h1>
-            <button onClick={() => this.generateSample()}>Generate Sample</button>
-            <div>
-              <ResumePDF
-                personalInfo={this.state.personalInfo}
-                education={this.state.education}
-                projects={this.state.projects}
-                skills={this.state.skills}
-                workExperience={this.state.workExperience}
-              />
-            </div>
+          <h1>Resume Builder</h1>
+          <button onClick={() => this.generateSample()}>Generate Sample</button>
+          <div>
+            <ResumePDF
+              personalInfo={this.state.personalInfo}
+              education={this.state.education}
+              projects={this.state.projects}
+              skills={this.state.skills}
+              workExperience={this.state.workExperience}
+            />
+          </div>
         </div>
         <div className="App-Preview">
           <ResumePreview
@@ -200,26 +214,32 @@ class App extends Component {
           />
         </div>
         <div className="App-Input">
-          <ButtonManager />
-          <PersonalInfo
-            onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
-            data={this.state.personalInfo}
-          />
+          <ButtonManager onButtonClick={this.handleButtonClick}/>
+          {this.state.personalInfoView && (
+            <PersonalInfo
+              onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
+              data={this.state.personalInfo}
+            />
+          )}
           <Education
             onUpdate={(newData) => this.updateStates(newData, "education")}
             data={this.state.education}
+            status={this.state.educationView}
           />
           <WorkExperience
             onUpdate={(newData) => this.updateStates(newData, "workExperience")}
             data={this.state.workExperience}
+            status={this.state.workExperienceView}
           />
           <Projects
             onUpdate={(newData) => this.updateStates(newData, "projects")}
             data={this.state.projects}
+            status={this.state.projectsView}
           />
           <Skills
             onUpdate={(newData) => this.updateStates(newData, "skills")}
             data={this.state.skills}
+            status={this.state.skillsView}
           />
         </div>
       </div>
