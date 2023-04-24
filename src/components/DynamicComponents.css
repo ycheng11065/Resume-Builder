@@ -1,5 +1,17 @@
+.Component-Root button {
+    width: 3rem;
+    height: 3rem;
+}
+
 .Component-Root {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.Component-Section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
     align-items: center;
 }

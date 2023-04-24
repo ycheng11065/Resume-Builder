@@ -1,6 +1,8 @@
 import "./DynamicComponents.css";
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 
 class DynamicComponents extends Component {
   constructor(props, config) {
@@ -74,13 +76,17 @@ class DynamicComponents extends Component {
       <div className="Component-Root">
         <h2 className="Component-Title">{this.title}</h2>
         <div className="Component-Section">
-          <button className="Component-Add" onClick={this.addItem}>Add {this.itemName}</button>
           {items.map((itemId) => (
             <div key={itemId}>
               {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
-              <button className="Component-Delete" onClick={() => this.handleDelete(itemId)}>Delete</button>
+              <button className="Component-Delete" onClick={() => this.handleDelete(itemId)}>
+                <AiOutlineClose size />
+              </button>
             </div>
           ))}
+          <button className="Component-Add" onClick={this.addItem}>
+            <AiOutlinePlus size />  
+          </button>
         </div>
       </div>
     );
