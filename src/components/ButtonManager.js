@@ -10,23 +10,30 @@ import { SlGraduation } from "react-icons/sl";
 
 
 class ButtonManager extends Component {
+    handleButtonClick = (buttonType) => {
+        if (this.props.onButtonClick) {
+            this.props.onButtonClick(buttonType);
+        }
+    }
+
+
     render() {
 
         return (
             <div className="Button-Manager-Root">
-                <button className="Button-Profile"> 
+                <button className="Button-Profile" onClick={() => this.handleButtonClick("profile")}> 
                     <CgProfile size/>
                 </button>   
-                <button className="Button-Education"> 
+                <button className="Button-Education" onClick={() => this.handleButtonClick("education")}> 
                     <SlGraduation size/>
                 </button>   
-                <button className="Button-Work"> 
+                <button className="Button-Work" onClick={() => this.handleButtonClick("work")}> 
                     <CgWorkAlt size/>
                 </button>   
-                <button className="Button-Project"> 
+                <button className="Button-Project" onClick={() => this.handleButtonClick("project")}> 
                     <RiLightbulbLine size/>
                 </button>   
-                <button className="Button-Skills"> 
+                <button className="Button-Skills" onClick={() => this.handleButtonClick("skill")}> 
                     <TbTools size/>
                 </button>   
             </div>

@@ -221,26 +221,34 @@ class App extends Component {
               data={this.state.personalInfo}
             />
           )}
-          <Education
-            onUpdate={(newData) => this.updateStates(newData, "education")}
-            data={this.state.education}
-            status={this.state.educationView}
-          />
-          <WorkExperience
-            onUpdate={(newData) => this.updateStates(newData, "workExperience")}
-            data={this.state.workExperience}
-            status={this.state.workExperienceView}
-          />
-          <Projects
-            onUpdate={(newData) => this.updateStates(newData, "projects")}
-            data={this.state.projects}
-            status={this.state.projectsView}
-          />
-          <Skills
-            onUpdate={(newData) => this.updateStates(newData, "skills")}
-            data={this.state.skills}
-            status={this.state.skillsView}
-          />
+          {this.state.educationView && (
+            <Education
+              onUpdate={(newData) => this.updateStates(newData, "education")}
+              data={this.state.education}
+              status={this.state.educationView}
+            />
+          )}
+          {this.state.workExperienceView && ( 
+            <WorkExperience
+              onUpdate={(newData) => this.updateStates(newData, "workExperience")}
+              data={this.state.workExperience}
+              status={this.state.workExperienceView}
+            />
+          )}
+          {this.state.projectsView && (
+            <Projects
+              onUpdate={(newData) => this.updateStates(newData, "projects")}
+              data={this.state.projects}
+              status={this.state.projectsView}
+            />
+          )}
+          {this.state.skillsView && (
+            <Skills
+              onUpdate={(newData) => this.updateStates(newData, "skills")}
+              data={this.state.skills}
+              status={this.state.skillsView}
+            />
+          )}
         </div>
       </div>
     );
