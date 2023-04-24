@@ -3,6 +3,7 @@
 }
 
 .Education-Root {
+    border: 2px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;

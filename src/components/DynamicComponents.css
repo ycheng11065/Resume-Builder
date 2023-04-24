@@ -4,14 +4,16 @@
 }
 
 .Component-Root {
+    border: 2px solid green;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .Component-Section {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
