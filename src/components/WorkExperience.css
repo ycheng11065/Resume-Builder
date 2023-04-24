@@ -1,3 +1,9 @@
+.Work-Root {
+    border-radius: 15px;
+    padding: 3rem;
+    background-color: lightblue;
+}
+
 .Work-Input input{
     text-align: left;
 }
@@ -9,18 +15,22 @@
     box-sizing: border-box;
 }
 
-.First-Row {
-    display: flex;
-    gap: 2rem;
-}
-
-.Second-Row {
+.First-Row,
+.Second-Row,
+.Third-Row {
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
 }
 
-.Third-Row {
+.First-Row > input,
+.Second-Row > input,
+.Third-Row > input {
+  flex: 1;
+}
+
+
+.Fourth-Row {
     margin-top: 1rem;
     position: relative;
     display: flex;

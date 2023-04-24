@@ -77,7 +77,7 @@ class DynamicComponents extends Component {
         <h2 className="Component-Title">{this.title}</h2>
         <div className="Component-Section">
           {items.map((itemId) => (
-            <div key={itemId}>
+            <div className="Component-Input" key={itemId}>
               {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
               <button className="Component-Delete" onClick={() => this.handleDelete(itemId)}>
                 <AiOutlineClose size />

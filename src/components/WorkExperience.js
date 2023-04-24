@@ -1,4 +1,4 @@
-import "./WorkExperience.css"
+import "./WorkExperience.css";
 import React from "react";
 import DynamicComponents from "./DynamicComponents";
 
@@ -31,6 +31,8 @@ class WorkExperience extends DynamicComponents {
               value={inputValues[workId]["position"]}
               onChange={handleChange}
             />
+          </div>
+          <div className="Second-Row">
             <input
               className="Work-Company"
               type="text"
@@ -39,9 +41,17 @@ class WorkExperience extends DynamicComponents {
               value={inputValues[workId]["company"]}
               onChange={handleChange}
             />
+            <input
+              className="Work-Location"
+              type="text"
+              name="location"
+              placeholder="Location"
+              value={inputValues[workId]["location"]}
+              onChange={handleChange}
+            />
           </div>
 
-          <div className="Second-Row">
+          <div className="Third-Row">
             <input
               className="Work-Start-Date"
               type="text"
@@ -58,16 +68,8 @@ class WorkExperience extends DynamicComponents {
               value={inputValues[workId]["endDate"]}
               onChange={handleChange}
             />
-            <input
-              className="Work-Location"
-              type="text"
-              name="location"
-              placeholder="Location"
-              value={inputValues[workId]["location"]}
-              onChange={handleChange}
-            />
           </div>
-          <div className="Third-Row">
+          <div className="Fourth-Row">
             <textarea
               className="Work-Description"
               name="description"
@@ -78,7 +80,7 @@ class WorkExperience extends DynamicComponents {
               cols="50"
             />
           </div>
-        </div>        
+        </div>
       </div>
     );
   }

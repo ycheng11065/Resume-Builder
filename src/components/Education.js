@@ -18,39 +18,44 @@ class Education extends DynamicComponents {
 
   renderInputs(schoolId, inputValues, handleChange) {
     return (
-      <div className="Education-Root">
-        <input
-          className= "Education-Name"
-          type="text"
-          name="schoolName"
-          placeholder="School Name"
-          value={inputValues[schoolId]["schoolName"]}
-          onChange={handleChange}
-        />
-        <input
-          className= "Education-Degree"
-          type="text"
-          name="degree"
-          placeholder="Degree"
-          value={inputValues[schoolId]["degree"]}
-          onChange={handleChange}
-        />
-        <input
-          className= "Education-Date-Start"
-          type="text"
-          name="startDate"
-          placeholder="Start date"
-          value={inputValues[schoolId]["startDate"]}
-          onChange={handleChange}
-        />
-        <input
-          className= "Education-Date-End"
-          type="text"
-          name="endDate"
-          placeholder="End Date"
-          value={inputValues[schoolId]["endDate"]}
-          onChange={handleChange}
-        />
+      <div>
+        <div>
+          
+        </div>
+        <div className="Education-Input">
+          <input
+            className="Education-Name"
+            type="text"
+            name="schoolName"
+            placeholder="School Name"
+            value={inputValues[schoolId]["schoolName"]}
+            onChange={handleChange}
+          />
+          <input
+            className="Education-Degree"
+            type="text"
+            name="degree"
+            placeholder="Degree"
+            value={inputValues[schoolId]["degree"]}
+            onChange={handleChange}
+          />
+          <input
+            className="Education-Date-Start"
+            type="text"
+            name="startDate"
+            placeholder="Start date"
+            value={inputValues[schoolId]["startDate"]}
+            onChange={handleChange}
+          />
+          <input
+            className="Education-Date-End"
+            type="text"
+            name="endDate"
+            placeholder="End Date"
+            value={inputValues[schoolId]["endDate"]}
+            onChange={handleChange}
+          />
+        </div>
       </div>
     );
   }

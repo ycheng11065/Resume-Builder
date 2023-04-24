@@ -1,11 +1,13 @@
-.Education-Root * {
+.Education-Input * {
     font-size: 1.5rem;
 }
 
-.Education-Root {
+.Education-Input {
     border: 2px solid black;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
-
+    padding: 3rem;
+    background-color: lightblue;
 }
