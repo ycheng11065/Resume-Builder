@@ -8,6 +8,8 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import ResumePreview from "./components/ResumePreview";
 import ResumePDF from "./components/ResumePDF";
+import ButtonManager from "./components/ButtonManager";
+
 
 class App extends Component {
   constructor(props) {
@@ -198,6 +200,7 @@ class App extends Component {
           />
         </div>
         <div className="App-Input">
+          <ButtonManager />
           <PersonalInfo
             onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
             data={this.state.personalInfo}

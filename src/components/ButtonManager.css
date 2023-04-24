@@ -1,0 +1,12 @@
+.Button-Manager-Root {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Button-Manager-Root button {
+    border-radius: 15px;
+    width: 5rem;
+    height: 5rem;
+}

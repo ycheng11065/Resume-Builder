@@ -1,3 +1,4 @@
+import "./Skills.css"
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -90,29 +91,30 @@ class Skills extends Component {
 
   renderInput(skills, inputValues) {
     return Object.entries(skills).map(([category, skills]) => (
-      <div key={category}>
+      <div className="Skills-Root-2" key={category}>
         <h3>{category}</h3>
-        <button onClick={() => this.handleDeleteCategory(category)}>
+        <button className="Skills-Delete-Category" onClick={() => this.handleDeleteCategory(category)}>
           Delete Category
         </button>
-        <ul>
+        <ul className="Skills-List">
           {Object.entries(skills).map(([skillId, skill]) => (
             <div key={skillId}>
-              <li>{skill}</li>
-              <button onClick={() => this.handleDeleteSkill(category, skillId)}>
+              <li className="Skills-skill">{skill}</li>
+              <button className="Skills-Delete-Skill" onClick={() => this.handleDeleteSkill(category, skillId)}>
                 Delete Skill
               </button>
             </div>
           ))}
         </ul>
         <input
+          className="Skills-Skill-Input"
           type="text"
           name="skill"
           placeholder="Skill"
           value={inputValues[category] || ""}
           onChange={this.handleSkillChange(category)}
         />
-        <button onClick={() => this.addSkill(category)}>Add Skill</button>
+        <button className="Skills-Skill-Add" onClick={() => this.addSkill(category)}>Add Skill</button>
       </div>
     ));
   }
@@ -121,16 +123,17 @@ class Skills extends Component {
     const { category, skills, inputValues } = this.state;
 
     return (
-      <div>
-        <h2>Skills</h2>
+      <div className="Skills-Root-1">
+        <h2 className="Skills-Title">Skills</h2>
         <input
+          className="Skills-Category-Add"
           type="text"
           name="category"
           placeholder="Skill category"
           value={category}
           onChange={this.handleCategoryChange}
         />
-        <button onClick={this.addCategory}>Add Category</button>
+        <button className="Skills-Category-Add-Btn" onClick={this.addCategory}>Add Category</button>
         {this.renderInput(skills, inputValues)}
       </div>
     );
