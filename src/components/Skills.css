@@ -1,5 +1,67 @@
+.Skills-Root-1 button {
+    width: 3rem;
+    height: 3rem;
+}
+
+.Skills-Root-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Skills-Category {
+    display: flex;
+}
+
+.Skills-Root-2 {
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.Category-Title {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Skills-Delete-Category {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .Skills-List {
+    margin-top: 4rem;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Skills-Section {
+    display: flex;
+    background-color: white;
+    align-items: center;
+}
+
+.Skills-Add {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Skills-Category {
+    margin-top: 2rem;
+}
+
+.Skills-Root-2 {
+    margin-top: 2rem;
+    width: 80%;
+    padding-bottom: 2rem;
+    background-color: lightblue;
+}
+
+.Skills-Skill {
+    margin-right: 1rem;
+    padding-left: 1rem;
 }
