@@ -192,16 +192,18 @@ class App extends Component {
     return (
       <div className="App-Root">
         <div className="App-Header">
-          <h1>Resume Builder</h1>
-          <button onClick={() => this.generateSample()}>Generate Sample</button>
-          <div>
-            <ResumePDF
-              personalInfo={this.state.personalInfo}
-              education={this.state.education}
-              projects={this.state.projects}
-              skills={this.state.skills}
-              workExperience={this.state.workExperience}
-            />
+          <h1 className="App-Name">Resume Builder</h1>
+          <div className="App-Utility">
+            <button onClick={() => this.generateSample()}>Generate Sample</button>
+            <div>
+              <ResumePDF
+                personalInfo={this.state.personalInfo}
+                education={this.state.education}
+                projects={this.state.projects}
+                skills={this.state.skills}
+                workExperience={this.state.workExperience}
+              />
+          </div>
           </div>
         </div>
         <div className="App-Content">
