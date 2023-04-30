@@ -33,9 +33,10 @@
     /* border-radius: 50px; */
     position: absolute;
     top: 2rem;
-    right: 0.7rem;
+    right: 0;
 }
 
 .Component-Add {
     margin-top: 1rem;
+    margin-bottom: 6rem;
 }
