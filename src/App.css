@@ -28,10 +28,10 @@
 
 :root {
     --resume-preview-width: 50rem;
-    --dark-background-color: #14143D;
+    --dark-background-color: #292b2c;
     --dark-light-color: #474747;
-    --dark-highlight-color: white;
-    --dark-font-color: #00d7ff;
+    --dark-highlight-color: grey;
+    --dark-font-color: white;
 
 }
 

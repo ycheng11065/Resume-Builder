@@ -3,7 +3,7 @@
 }
 
 .Education-Input {
-    border-top: 4px solid var(--dark-highlight-color);
+    border-top: 2px solid var(--dark-highlight-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
