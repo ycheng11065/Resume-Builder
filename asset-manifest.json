@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Resume-Builder/static/css/main.dd32c4f0.css",
+    "main.js": "/Resume-Builder/static/js/main.105243c4.js",
+    "static/media/cmunbx.ttf": "/Resume-Builder/static/media/cmunbx.45b78465c34fdb77cbdc.ttf",
+    "static/media/cmunorm.ttf": "/Resume-Builder/static/media/cmunorm.9ba8fa16ce97bb04fbaa.ttf",
+    "static/media/cmunti.ttf": "/Resume-Builder/static/media/cmunti.49618ae7cdca569ab200.ttf",
+    "static/media/Manrope-Normal.ttf": "/Resume-Builder/static/media/Manrope-Normal.e776defa758addbe78d7.ttf",
+    "static/media/Manrope-Bold.ttf": "/Resume-Builder/static/media/Manrope-Bold.f90749d53c89d2780cfb.ttf",
+    "static/media/Quicksand-Regular.ttf": "/Resume-Builder/static/media/Quicksand-Regular.eaaa0325196cfc4dc15b.ttf",
+    "static/media/Quicksand-Bold.ttf": "/Resume-Builder/static/media/Quicksand-Bold.4c95904387d18546c023.ttf",
+    "index.html": "/Resume-Builder/index.html",
+    "main.dd32c4f0.css.map": "/Resume-Builder/static/css/main.dd32c4f0.css.map",
+    "main.105243c4.js.map": "/Resume-Builder/static/js/main.105243c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd32c4f0.css",
+    "static/js/main.105243c4.js"
+  ]
+}
