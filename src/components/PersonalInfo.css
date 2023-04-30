@@ -17,10 +17,15 @@
 }
 
 .Profile-Inputs {
-    border-radius: 15px;
     padding: 3rem;
     background-color: var(--dark-background-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
+}
+
+.Profile-Inputs input {
+    padding-left: 1rem;
+    height: 3rem;
+    border-radius: 7px;
 }

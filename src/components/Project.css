@@ -1,7 +1,8 @@
 .Project-Root {
-    padding: 3.2rem;
-    background-color: var(--dark-highlight-color);
-    border-radius: 15px;
+    border-top: 2px solid grey;
+    padding: 1.5rem;
+    padding-top: 6rem;
+    /* border-radius: 15px; */
 }
 
 .Project-Root textarea {
