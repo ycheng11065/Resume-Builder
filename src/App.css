@@ -19,11 +19,18 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 :root {

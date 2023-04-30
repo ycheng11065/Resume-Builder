@@ -12,12 +12,16 @@
 }
 
 .Profile-Preview-Title {
+    margin-bottom: 1rem;
     font-size: 3rem;
     color: var(--dark-font-color)
 }
 
 .Profile-Inputs {
-    padding: 3rem;
+    border-top: 2px solid grey;
+    padding-top: 3rem;
+    border-right: 1rem;
+    border-left: 1rem;
     background-color: var(--dark-background-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
