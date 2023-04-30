@@ -1,6 +1,8 @@
 .Component-Root button {
-    width: 3rem;
-    height: 3rem;
+    background-color: transparent;
+    color: var(--dark-highlight-color);
+    width: 2rem;
+    height: 2rem;
 }
 
 .Component-Root {
@@ -8,6 +10,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.Component-Title {
+    font-size: 3rem;
+    color: var(--dark-font-color);
 }
 
 .Component-Section {
@@ -23,9 +30,10 @@
 }
 
 .Component-Delete {
+    /* border-radius: 50px; */
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2rem;
+    right: 0.7rem;
 }
 
 .Component-Add {

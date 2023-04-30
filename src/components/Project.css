@@ -1,6 +1,6 @@
 .Project-Root {
     padding: 3.2rem;
-    background-color: lightblue;
+    background-color: var(--dark-highlight-color);
     border-radius: 15px;
 }
 

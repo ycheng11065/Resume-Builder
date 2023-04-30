@@ -51,72 +51,74 @@ class PersonalInfo extends Component {
 
     return (
       <div className="Profile-Root">
-        <h2 className="Title">Personal Info</h2>
-        <div className="Profile-Inputs">
-          <input
-            className="First-Name"
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            value={firstName}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Last-Name"
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Major"
-            type="text"
-            name="major"
-            placeholder="Major"
-            value={major}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Year-Level"
-            type="text"
-            name="yearLevel"
-            placeholder="Year level"
-            value={yearLevel}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Phone"
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={phone}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Email"
-            type="text"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Linkedin"
-            type="text"
-            name="linkedin"
-            placeholder="Linkedin"
-            value={linkedin}
-            onChange={this.handleChange}
-          />
-          <input
-            className="Github"
-            type="text"
-            name="github"
-            placeholder="Github"
-            value={github}
-            onChange={this.handleChange}
-          />
+        <div className="Profile-Content">
+          <h2 className="Profile-Preview-Title">Personal Info</h2>
+          <div className="Profile-Inputs">
+            <input
+              className="First-Name"
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={firstName}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Last-Name"
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Major"
+              type="text"
+              name="major"
+              placeholder="Major"
+              value={major}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Year-Level"
+              type="text"
+              name="yearLevel"
+              placeholder="Year level"
+              value={yearLevel}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Phone"
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={phone}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Email"
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Linkedin"
+              type="text"
+              name="linkedin"
+              placeholder="Linkedin"
+              value={linkedin}
+              onChange={this.handleChange}
+            />
+            <input
+              className="Github"
+              type="text"
+              name="github"
+              placeholder="Github"
+              value={github}
+              onChange={this.handleChange}
+            />
+          </div>
         </div>
       </div>
     );

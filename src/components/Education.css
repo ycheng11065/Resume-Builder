@@ -3,11 +3,11 @@
 }
 
 .Education-Input {
-    border: 2px solid black;
-    border-radius: 15px;
+    border-top: 4px solid var(--dark-highlight-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
     padding: 3rem;
-    background-color: lightblue;
+    padding-top: 6rem;
+    background-color: var(--dark-background-color);
 }

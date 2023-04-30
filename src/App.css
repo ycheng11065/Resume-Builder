@@ -28,6 +28,11 @@
 
 :root {
     --resume-preview-width: 50rem;
+    --dark-background-color: #14143D;
+    --dark-light-color: #474747;
+    --dark-highlight-color: white;
+    --dark-font-color: #00d7ff;
+
 }
 
 .App-Root {
@@ -37,6 +42,7 @@
     grid-template-areas: 
         " header header "
         " content content ";
+    background-color: var(--dark-background-color);
 }
 
 .App-Header {
@@ -47,7 +53,6 @@
 .App-Content {
     grid-area: content;
     width: 100%;
-    border: 2px solid red;
     display: flex;
     justify-content: space-between;
 }
@@ -58,13 +63,12 @@
 }
 
 .App-Input *{
+    /* color: var(--dark-highlight-color); */
     font-size: 1.5rem;
 }
 
 .App-Input {
-    /* grid-area: input; */
     width: 100%;
-    /* border: 2px solid green; */
 }
 
 @media (min-width: 1280px) {

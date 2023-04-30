@@ -15,7 +15,6 @@
 }
 
 .Skills-Root-2 {
-    /* border: 2px solid red; */
     position: relative;
 }
 
@@ -59,7 +58,7 @@
     margin-top: 2rem;
     width: 80%;
     padding-bottom: 2rem;
-    background-color: lightblue;
+    background-color: var(--dark-highlight-color);
 }
 
 .Skills-Skill {

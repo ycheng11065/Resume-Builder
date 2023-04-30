@@ -1,13 +1,25 @@
 .Profile-Root {
     margin-top: 2rem;
     width: 100%;
+}
+
+.Profile-Content {
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
     align-items: center;
 }
 
+.Profile-Preview-Title {
+    font-size: 3rem;
+    color: var(--dark-font-color)
+}
+
 .Profile-Inputs {
+    border-radius: 15px;
+    padding: 3rem;
+    background-color: var(--dark-background-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
