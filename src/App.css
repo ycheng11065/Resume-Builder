@@ -32,11 +32,11 @@
 
 .App-Root {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         " header header "
-        " preview input";
+        " content content ";
 }
 
 .App-Header {
@@ -44,9 +44,17 @@
     grid-area: header;
 }
 
+.App-Content {
+    grid-area: content;
+    width: 100%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
 .App-Preview {
     /* border: 2px solid red; */
-    grid-area: preview;
+    /* grid-area: preview; */
 }
 
 .App-Input *{
@@ -54,7 +62,7 @@
 }
 
 .App-Input {
-    grid-area: input;
+    /* grid-area: input; */
     width: 100%;
     /* border: 2px solid green; */
 }
@@ -69,6 +77,13 @@
 @media (min-width: 1912px) {
     * {
         font-size: 20px;
+
+    }
+}
+
+@media (min-width: 1920px) {
+    * {
+        font-size: 25px;
 
     }
 }

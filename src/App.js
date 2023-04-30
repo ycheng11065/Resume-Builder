@@ -179,7 +179,7 @@ class App extends Component {
   };
 
   handleButtonClick = (buttonType) => {
-    this.setState({ 
+    this.setState({
       personalInfoView: buttonType === "profile",
       educationView: buttonType === "education",
       workExperienceView: buttonType === "work",
@@ -204,51 +204,57 @@ class App extends Component {
             />
           </div>
         </div>
-        <div className="App-Preview">
-          <ResumePreview
-            personalInfo={this.state.personalInfo}
-            education={this.state.education}
-            projects={this.state.projects}
-            skills={this.state.skills}
-            workExperience={this.state.workExperience}
-          />
-        </div>
-        <div className="App-Input">
-          <ButtonManager onButtonClick={this.handleButtonClick}/>
-          {this.state.personalInfoView && (
-            <PersonalInfo
-              onUpdate={(newData) => this.updateStates(newData, "personalInfo")}
-              data={this.state.personalInfo}
+        <div className="App-Content">
+          <div className="App-Preview">
+            <ResumePreview
+              personalInfo={this.state.personalInfo}
+              education={this.state.education}
+              projects={this.state.projects}
+              skills={this.state.skills}
+              workExperience={this.state.workExperience}
             />
-          )}
-          {this.state.educationView && (
-            <Education
-              onUpdate={(newData) => this.updateStates(newData, "education")}
-              data={this.state.education}
-              status={this.state.educationView}
-            />
-          )}
-          {this.state.workExperienceView && ( 
-            <WorkExperience
-              onUpdate={(newData) => this.updateStates(newData, "workExperience")}
-              data={this.state.workExperience}
-              status={this.state.workExperienceView}
-            />
-          )}
-          {this.state.projectsView && (
-            <Projects
-              onUpdate={(newData) => this.updateStates(newData, "projects")}
-              data={this.state.projects}
-              status={this.state.projectsView}
-            />
-          )}
-          {this.state.skillsView && (
-            <Skills
-              onUpdate={(newData) => this.updateStates(newData, "skills")}
-              data={this.state.skills}
-              status={this.state.skillsView}
-            />
-          )}
+          </div>
+          <div className="App-Input">
+            <ButtonManager onButtonClick={this.handleButtonClick} />
+            {this.state.personalInfoView && (
+              <PersonalInfo
+                onUpdate={(newData) =>
+                  this.updateStates(newData, "personalInfo")
+                }
+                data={this.state.personalInfo}
+              />
+            )}
+            {this.state.educationView && (
+              <Education
+                onUpdate={(newData) => this.updateStates(newData, "education")}
+                data={this.state.education}
+                status={this.state.educationView}
+              />
+            )}
+            {this.state.workExperienceView && (
+              <WorkExperience
+                onUpdate={(newData) =>
+                  this.updateStates(newData, "workExperience")
+                }
+                data={this.state.workExperience}
+                status={this.state.workExperienceView}
+              />
+            )}
+            {this.state.projectsView && (
+              <Projects
+                onUpdate={(newData) => this.updateStates(newData, "projects")}
+                data={this.state.projects}
+                status={this.state.projectsView}
+              />
+            )}
+            {this.state.skillsView && (
+              <Skills
+                onUpdate={(newData) => this.updateStates(newData, "skills")}
+                data={this.state.skills}
+                status={this.state.skillsView}
+              />
+            )}
+          </div>
         </div>
       </div>
     );
