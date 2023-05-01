@@ -6,10 +6,6 @@
     border-radius: 5px;
 }
 
-.Skills-Root-1 Input {
-    border-radius: 5px;
-}
-
 .Skills-Root-1 {
     margin-top: 2rem;
     display: flex;
@@ -23,7 +19,26 @@
 }
 
 .Skills-Category {
+    /* border: 2px solid red; */
     display: flex;
+    align-items: center;
+}
+
+.Skills-Category-Add {
+    padding-left: 1rem;
+    height: 3rem;
+    border-radius: 7px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    flex: 1;
+}
+
+.Skills-Category button {
+    width: 3rem;
+    height: 3rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    flex: 1;
 }
 
 .Skills-Root-2 {
@@ -62,6 +77,23 @@
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.Skills-Skill-Input {
+    padding-left: 1rem;
+    height: 3rem;
+    border-radius: 7px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    /* flex: 1; */
+}
+
+.Skills-Add button{
+    width: 3rem;
+    height: 3rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    /* flex: 1; */
 }
 
 .Skills-Category {
