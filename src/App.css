@@ -162,6 +162,10 @@ html {
 }
 
 @media (min-width: 368px) and (max-width: 576px) {
+    :root {
+        --resume-preview-width: 52rem;
+    }
+
     .App-Root {
         overflow: auto;
     }
