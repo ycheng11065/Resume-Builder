@@ -203,7 +203,7 @@ class App extends Component {
                 skills={this.state.skills}
                 workExperience={this.state.workExperience}
               />
-          </div>
+            </div>
           </div>
         </div>
         <div className="App-Content">

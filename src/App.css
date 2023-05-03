@@ -1,3 +1,7 @@
+html {
+    font-size: clamp(6px, calc(6px + (1 * (100vw - 600px) / 100)), 20px);
+}
+
 @font-face {
     font-family: "CMU";
     src: url("./fonts/cmunorm.ttf") format("truetype");
@@ -57,19 +61,25 @@
         " header header "
         " content content ";
     background-color: var(--dark-background-color);
+    min-height: 100vh;
+    width: 100vw;
 }
 
 .App-Header {
+    border: 2px solid red;
     width: 100%;
     position: relative;
     grid-area: header;
+    flex-wrap: nowrap;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
     background-color: #5062AA;
 }
 
 .App-Name {
+    border: 2px solid red;
     font-size: 4rem;
     color: white;
     font-weight: 800;
@@ -79,9 +89,9 @@
 }
 
 .App-Utility {
-    position: absolute;
-    top: 38%;
-    right: 3rem;
+    border: 2px solid red;
+    margin-left: 2rem;
+    padding-right: 2rem;
     bottom: center;
     display: flex;
     gap: 3rem;
@@ -101,6 +111,7 @@
     grid-area: content;
     width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
@@ -110,7 +121,6 @@
 }
 
 .App-Input *{
-    /* color: var(--dark-highlight-color); */
     font-size: 1.5rem;
     font-weight: 200;
 }
@@ -119,7 +129,80 @@
     width: 100%;
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 367px) {
+    html {
+        /* font-size: 6px; */
+    }
+
+    .App-Root {
+        overflow: auto;
+        /* min-width: 30rem; */
+    }
+
+    .App-Header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .App-Content {
+        justify-content: center;
+        gap: 2rem;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .App-Input {
+        margin-bottom: 15rem;
+    }
+}
+
+@media (min-width: 368px) and (max-width: 576px) {
+    .App-Root {
+        overflow: auto;
+        min-width: 50rem;
+    }
+
+    .App-Header {
+        justify-content: space-between;
+    }
+
+    .App-Content {
+        justify-content: center;
+        gap: 2rem;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .App-Input {
+        margin-bottom: 15rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 644px) {
+    .App-Root {
+        overflow: auto;
+        min-width: 50rem;
+    }
+
+    .App-Header {
+        justify-content: space-between;
+    }
+
+    .App-Content {
+        border: 2px solid red;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .App-Input {
+        margin-bottom: 15rem;
+    }
+}
+
+
+/* @media (min-width: 1280px) {
     * {
         font-size: 13px;
     }
@@ -138,4 +221,4 @@
         font-size: 25px;
 
     }
-}
+} */
