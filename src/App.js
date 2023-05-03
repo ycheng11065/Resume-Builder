@@ -28,6 +28,23 @@ class App extends Component {
     };
   }
 
+  reset = () => {
+    this.setState(
+      {
+        personalInfo: {},
+        education: {},
+        projects: {},
+        skills: {},
+        workExperience: {},
+        personalInfoView: true,
+        educationView: false,
+        projectsView: false,
+        skillsView: false,
+        workExperienceView: false,
+      }
+    );
+  }
+
   generateSample = () => {
     const educationId = uuidv4();
     const projectIds = [];
@@ -192,7 +209,7 @@ class App extends Component {
         <div className="App-Header">
           <h1 className="App-Name">Resume Builder</h1>
           <div className="App-Utility">
-            <button onClick={() => this.generateSample()}>Reset</button>
+            <button onClick={() => this.reset()}>Reset</button>
             <button onClick={() => this.generateSample()}>Generate Sample</button>
             <div>
               <ResumePDF
