@@ -149,7 +149,6 @@ class App extends Component {
             location: "New York, NY",
             description:
               "• Collaborated with a team of engineers to develop a web application using React and Node.js\n" +
-              "• Implemented user authentication and authorization using JWT\n" +
               "• Optimized database queries to improve application performance\n" +
               "• Created unit tests and end-to-end tests using Jest and React Testing Library",
           },
@@ -162,7 +161,6 @@ class App extends Component {
             description:
               "• Contributed to the development of a microservices architecture using Java and Spring Boot\n" +
               "• Integrated third-party APIs to enhance the functionality of the application\n" +
-              "• Participated in code reviews and provided constructive feedback to peers\n" +
               "• Assisted in migrating the application from a monolithic architecture to microservices",
           },
         },

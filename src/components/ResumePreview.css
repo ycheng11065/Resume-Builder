@@ -1,5 +1,5 @@
 h1 {
-    font-size: 1.4228rem;
+    font-size: 2rem;
 }
 
 h2 {
@@ -41,14 +41,14 @@ pre {
 }
 
 .Personal-Profile {
-    margin-top: 0.99975rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 .Section-Title {
-    margin-top: 0.33;
+    margin-top: 0.5;
     text-align: left;
     border-bottom: 3px solid black;
 }
@@ -130,7 +130,7 @@ pre {
     padding-left: 0.4rem;
 }
 
- @media (max-width: 414px) {
+@media (max-width: 414px) {
     .Resume-Preview {
         padding-bottom: calc(var(--resume-preview-width) * 1.5); 
     }
