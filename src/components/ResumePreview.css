@@ -130,6 +130,12 @@ pre {
     padding-left: 0.4rem;
 }
 
+@media (max-width: 414px) {
+    .Resume-Preview {
+        padding-bottom: calc(var(--resume-preview-width) * 1.5); /* Adjust this value as needed */
+    }
+}
+
 @media (min-width: 577px) {
     .Resume-Preview {
         margin-left: 2rem;
