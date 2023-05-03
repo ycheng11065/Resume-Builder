@@ -50,10 +50,13 @@ html {
     --dark-light-color: #474747;
     --dark-highlight-color: grey;
     --dark-font-color: white;
-
 }
 
+
 .App-Root {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,8 +65,18 @@ html {
     width: 100vw;
 }
 
+.App-Header > * {
+    margin: 0;
+    padding: 0;
+}
+
+.App-Content > * {
+    margin: 0;
+    padding: 0;
+}
+
 .App-Header {
-    border: 2px solid red;
+    box-sizing: border-box;
     width: 100%;
     position: relative;
     flex-wrap: nowrap;
@@ -85,7 +98,6 @@ html {
 }
 
 .App-Utility {
-    margin-left: 2rem;
     padding-right: 2rem;
     bottom: center;
     display: flex;
@@ -103,16 +115,12 @@ html {
 }
 
 .App-Content {
+    box-sizing: border-box;
+    /* border: 2px solid red; */
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-}
-
-.App-Preview {
-    /* border: 2px solid red; */
-    max-width: 50rem;
-    /* grid-area: preview; */
 }
 
 .App-Input *{
@@ -121,9 +129,8 @@ html {
 }
 
 .App-Input {
-    /* border: 2px solid red; */
     width: 100%;
-    max-width: 50rem;
+    margin-bottom: 15rem; 
 }
 
 @media (max-width: 367px) {
@@ -139,6 +146,7 @@ html {
 
     .App-Content {
         justify-content: center;
+        align-items: center;
         gap: 2rem;
         max-width: 100%;
         flex-wrap: wrap;
@@ -171,6 +179,16 @@ html {
     }
 }
 
+@media (min-width: 577px) {
+    .App-Preview {
+        max-width: 50rem;
+    }
+
+    .App-Input {
+        max-width: 50rem;
+    }
+}
+
 @media (min-width: 577px) and (max-width: 644px) {
     .App-Root {
         overflow: auto;
@@ -182,14 +200,9 @@ html {
     }
 
     .App-Content {
-        border: 2px solid red;
         justify-content: space-between;
         gap: 2rem;
         max-width: 100%;
         flex-wrap: nowrap;
-    }
-
-    .App-Input {
-        margin-bottom: 15rem;
     }
 }
