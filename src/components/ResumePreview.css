@@ -132,8 +132,16 @@ pre {
 
 @media (max-width: 414px) {
     .Resume-Preview {
-        padding-bottom: calc(var(--resume-preview-width) * 1.5); /* Adjust this value as needed */
+        background-color: #F2EECB;
+        width: var(--resume-preview-width);
+        position: relative;
     }
+    
+    .Resume-Preview::before {
+        content: "";
+        display: block;
+        padding-top: 129.4117647%; /* (11 / 8.5) * 100% */
+    }    
 }
 
 @media (min-width: 577px) {
