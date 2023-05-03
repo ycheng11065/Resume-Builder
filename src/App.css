@@ -129,14 +129,18 @@ html {
 }
 
 .App-Input {
+    /* border: 2px solid red; */
     width: 100%;
     margin-bottom: 15rem; 
+}
+
+.App-Preview {
+    /* border: 2px solid red; */
 }
 
 @media (max-width: 367px) {
     .App-Root {
         overflow: auto;
-        /* min-width: 30rem; */
     }
 
     .App-Header {
@@ -160,7 +164,6 @@ html {
 @media (min-width: 368px) and (max-width: 576px) {
     .App-Root {
         overflow: auto;
-        min-width: 50rem;
     }
 
     .App-Header {
