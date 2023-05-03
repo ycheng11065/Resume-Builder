@@ -4,14 +4,13 @@ export const styles = StyleSheet.create({
     page: {
         fontFamily: "CMU",
         flexDirection: "column",
-        // backgroundColor: "#F2EECB",
         paddingRight: "24pt",
         paddingLeft: "24pt",
         paddingTop: "15pt",
         size: "letter",
     },
     h1: {
-        fontSize: "17pt",
+        fontSize: "20pt",
         fontWeight: "bold",
     },
     h2: {
@@ -45,12 +44,13 @@ export const styles = StyleSheet.create({
         marginLeft: "2rem",
     },
     personalProfile: {
+        marginTop: "11pt",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
     },
     sectionTitle: {
-        marginTop: "5pt",
+        marginTop: "4pt",
         textAlign: "left",
         borderBottom: "2px solid black",
     },
@@ -90,7 +90,7 @@ export const styles = StyleSheet.create({
         marginLeft: "12pt",
     },
     projectSection: {
-        marginTop: "4pt",
+        marginTop: "3pt",
     },
     projectHeader: {
         display: "flex",
