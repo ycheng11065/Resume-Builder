@@ -2,6 +2,24 @@ import React, { Component } from "react";
 import "./ResumePreview.css";
 
 class ResumePreview extends Component {
+  updateResumePreviewPadding() {
+    const resumePreview = document.querySelector('.Resume-Preview');
+    const resumePreviewWidth = parseFloat(getComputedStyle(resumePreview).width);
+    const letterAspectRatio = 11 / 8.5; // Letter size aspect ratio (height / width)
+    const paddingBottom = resumePreviewWidth * letterAspectRatio;
+    resumePreview.style.paddingBottom = `${paddingBottom}px`;
+  }
+
+  componentDidMount() {
+    this.updateResumePreviewPadding();
+    window.addEventListener('resize', this.updateResumePreviewPadding);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateResumePreviewPadding);
+  }
+
+
   render() {
     const { personalInfo, education, workExperience, projects, skills } =
       this.props;
