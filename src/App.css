@@ -1,5 +1,5 @@
 html {
-    font-size: clamp(6px, calc(6px + (1 * (100vw - 600px) / 100)), 20px);
+    font-size: clamp(6px, calc(6px + (1 * (100vw - 600px) / 130)), 35px);
 }
 
 @font-face {
@@ -54,12 +54,9 @@ html {
 }
 
 .App-Root {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        " header header "
-        " content content ";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--dark-background-color);
     min-height: 100vh;
     width: 100vw;
@@ -69,27 +66,25 @@ html {
     border: 2px solid red;
     width: 100%;
     position: relative;
-    grid-area: header;
     flex-wrap: nowrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
     background-color: #5062AA;
+    max-height: 10rem;
 }
 
 .App-Name {
-    border: 2px solid red;
     font-size: 4rem;
     color: white;
     font-weight: 800;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 .App-Utility {
-    border: 2px solid red;
     margin-left: 2rem;
     padding-right: 2rem;
     bottom: center;
@@ -108,15 +103,15 @@ html {
 }
 
 .App-Content {
-    grid-area: content;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .App-Preview {
     /* border: 2px solid red; */
+    max-width: 50rem;
     /* grid-area: preview; */
 }
 
@@ -126,14 +121,12 @@ html {
 }
 
 .App-Input {
+    /* border: 2px solid red; */
     width: 100%;
+    max-width: 50rem;
 }
 
 @media (max-width: 367px) {
-    html {
-        /* font-size: 6px; */
-    }
-
     .App-Root {
         overflow: auto;
         /* min-width: 30rem; */
@@ -200,25 +193,3 @@ html {
         margin-bottom: 15rem;
     }
 }
-
-
-/* @media (min-width: 1280px) {
-    * {
-        font-size: 13px;
-    }
-}
-
-
-@media (min-width: 1912px) {
-    * {
-        font-size: 20px;
-
-    }
-}
-
-@media (min-width: 1920px) {
-    * {
-        font-size: 25px;
-
-    }
-} */
