@@ -192,6 +192,7 @@ class App extends Component {
         <div className="App-Header">
           <h1 className="App-Name">Resume Builder</h1>
           <div className="App-Utility">
+            <button onClick={() => this.generateSample()}>Reset</button>
             <button onClick={() => this.generateSample()}>Generate Sample</button>
             <div>
               <ResumePDF

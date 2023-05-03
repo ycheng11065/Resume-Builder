@@ -134,10 +134,6 @@ html {
     margin-bottom: 15rem; 
 }
 
-.App-Preview {
-    /* border: 2px solid red; */
-}
-
 @media (max-width: 367px) {
     .App-Root {
         overflow: auto;
