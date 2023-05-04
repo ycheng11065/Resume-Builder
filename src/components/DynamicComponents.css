@@ -30,13 +30,20 @@
 }
 
 .Component-Delete {
-    /* border-radius: 50px; */
     position: absolute;
     top: 2rem;
     right: 0;
 }
 
+.Component-Delete:hover {
+    background-color: var(--dark-light-color);
+}
+
 .Component-Add {
     margin-top: 1rem;
     margin-bottom: 6rem;
+}
+
+.Component-Add:hover {
+    background-color: var(--dark-light-color);
 }

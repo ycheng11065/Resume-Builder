@@ -22,19 +22,19 @@ class ButtonManager extends Component {
         return (
             <div className="Button-Manager-Root">
                 <button className="Button-Profile" onClick={() => this.handleButtonClick("profile")}> 
-                    <CgProfile size/>
+                    <CgProfile className="Button-Icon"/>
                 </button>   
                 <button className="Button-Education" onClick={() => this.handleButtonClick("education")}> 
-                    <SlGraduation size/>
+                    <SlGraduation className="Button-Icon"/>
                 </button>   
                 <button className="Button-Work" onClick={() => this.handleButtonClick("work")}> 
-                    <CgWorkAlt size/>
+                    <CgWorkAlt className="Button-Icon"/>
                 </button>   
                 <button className="Button-Project" onClick={() => this.handleButtonClick("project")}> 
-                    <RiLightbulbLine size/>
+                    <RiLightbulbLine className="Button-Icon"/>
                 </button>   
                 <button className="Button-Skills" onClick={() => this.handleButtonClick("skill")}> 
-                    <TbTools size/>
+                    <TbTools className="Button-Icon"/>
                 </button>   
             </div>
         );

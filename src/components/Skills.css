@@ -6,6 +6,10 @@
     border-radius: 7px;
 }
 
+.Skills-Root-1 button:hover {
+    background-color: var(--dark-light-color);
+}
+
 .Skills-Root-1 {
     margin-top: 2rem;
     display: flex;
@@ -32,6 +36,7 @@
     border-bottom-right-radius: 0;
     flex: 1;
 }
+
 
 .Skills-Category button {
     width: 3rem;
@@ -109,6 +114,13 @@
 .Skills-Section button {
     width: 2.1rem;
     height: 2.1rem;
+    color: var(--dark-highlight-color);
+    background-color: var(--dark-background-color);
+}
+
+.Skills-Section button:hover {
+    color: black;
+    background-color: #FE6464;
 }
 
 .Skills-Skill {

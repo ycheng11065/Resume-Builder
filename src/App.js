@@ -190,7 +190,7 @@ class App extends Component {
   updateStates = (newData, component) => {
     this.setState({
       [component]: newData,
-    });
+    }); 
   };
 
   handleButtonClick = (buttonType) => {
