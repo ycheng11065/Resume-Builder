@@ -17,9 +17,9 @@ class ResumePreviewPDF extends Component {
               {personalInfo.firstName} {personalInfo.lastName}
             </Text>
             <Text style={styles.h4}>
-              {personalInfo.major ? personalInfo.major + " Major" : ""}
+              {personalInfo.major ? personalInfo.major : ""}
               {personalInfo.yearLevel
-                ? ", " + personalInfo.yearLevel + " year"
+                ? ", " + personalInfo.yearLevel
                 : ""}
             </Text>
             <Text style={styles.h4}>
@@ -39,8 +39,7 @@ class ResumePreviewPDF extends Component {
                   ([school, schoolInfo]) => (
                     <View style={styles.educationSection} key={school}>
                       <Text style={styles.h4}>
-                        {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
-                        {personalInfo.major} Major
+                        {schoolInfo.schoolName}, {schoolInfo.degree}
                       </Text>
                       <Text style={styles.h4}>
                         {schoolInfo.startDate} - {schoolInfo.endDate}

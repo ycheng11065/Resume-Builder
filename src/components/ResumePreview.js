@@ -15,8 +15,8 @@ class ResumePreview extends Component {
               {personalInfo.firstName} {personalInfo.lastName}
             </h1>
             <h4 className="Profile-Title">
-              {personalInfo.major ? personalInfo.major + " Major" : ""}
-              {personalInfo.yearLevel ? ", " + personalInfo.yearLevel + " year" : ""}
+              {personalInfo.major ? personalInfo.major : ""}
+              {personalInfo.yearLevel ? ", " + personalInfo.yearLevel : ""}
             </h4>
             <h4 className="Profile-Contact">
               {personalInfo.phone}
@@ -35,8 +35,7 @@ class ResumePreview extends Component {
                   ([school, schoolInfo]) => (
                     <div className="Education-Section" key={school}>
                       <h4 className="Education-Info"> 
-                        {schoolInfo.schoolName}, {schoolInfo.degree},{" "}
-                        {personalInfo.major} Major
+                        {schoolInfo.schoolName}, {schoolInfo.degree}
                       </h4>
                       <h4 className="Education-Date">
                         {schoolInfo.startDate} - {schoolInfo.endDate}

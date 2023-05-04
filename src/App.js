@@ -70,8 +70,8 @@ class App extends Component {
       personalInfo: {
         firstName: "John",
         lastName: "Doe",
-        major: "Computer Science",
-        yearLevel: "2nd",
+        major: "Computer Science Major",
+        yearLevel: "2nd year",
         phone: "555-123-4567",
         email: "john.doe@example.com",
         linkedin: "linkedin.com/johndoe",
