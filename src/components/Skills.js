@@ -129,7 +129,7 @@ class Skills extends Component {
             onChange={this.handleSkillChange(category)}
           />
           <button
-            className="Skills-Skill-Add"
+            className="Skills-Add-Btn"
             onClick={() => this.addSkill(category)}
           >
             <AiOutlinePlus className="Button-Icon"/>
@@ -169,7 +169,7 @@ class Skills extends Component {
             onChange={this.handleCategoryChange}
           />
           <button
-            className="Skills-Category-Add-Btn"
+            className="Skills-Add-Btn"
             onClick={this.addCategory}
           >
             <AiOutlinePlus className="Button-Icon"/>

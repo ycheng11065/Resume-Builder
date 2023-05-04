@@ -6,10 +6,6 @@
     border-radius: 7px;
 }
 
-.Skills-Root-1 button:hover {
-    background-color: var(--dark-light-color);
-}
-
 .Skills-Root-1 {
     margin-top: 2rem;
     display: flex;
@@ -23,7 +19,6 @@
 }
 
 .Skills-Category {
-    /* border: 2px solid red; */
     display: flex;
     align-items: center;
 }
@@ -62,6 +57,11 @@
     position: absolute;
     top: 2rem;
     right: 0.7rem;
+}
+
+.Skills-Delete-Category:hover {
+    color: black;
+    background-color: var(--delete-color);
 }
 
 .Skills-List {
@@ -120,11 +120,15 @@
 
 .Skills-Section button:hover {
     color: black;
-    background-color: #FE6464;
+    background-color: var(--delete-color);
 }
 
 .Skills-Skill {
     border-radius: 15px;
     margin-right: 1rem;
     padding-left: 1rem;
+}
+
+.Skills-Add-Btn:hover {
+    background-color: var(--dark-hover-color);
 }

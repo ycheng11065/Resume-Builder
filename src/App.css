@@ -49,6 +49,8 @@ html {
     --dark-background-color: #292b2c;
     --dark-highlight-color: grey;
     --dark-font-color: white;
+    --dark-hover-color: #474747;
+    --delete-color: #FE6464;
 }
 
 
@@ -133,6 +135,8 @@ html {
     margin-bottom: 15rem; 
 }
 
+/* Media Queries */
+
 @media (max-width: 367px) {
     .App-Root {
         overflow: auto;
@@ -157,10 +161,6 @@ html {
 }
 
 @media (min-width: 368px) and (max-width: 576px) {
-    /* :root {
-        --resume-preview-width: 52rem;
-    } */
-
     .App-Root {
         overflow: auto;
     }
