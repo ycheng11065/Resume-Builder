@@ -36,7 +36,8 @@
 }
 
 .Component-Delete:hover {
-    background-color: var(--dark-light-color);
+    color: black;
+    background-color: var(--delete-color);
 }
 
 .Component-Add {
@@ -45,5 +46,5 @@
 }
 
 .Component-Add:hover {
-    background-color: var(--dark-light-color);
+    background-color: var(--dark-hover-color);
 }

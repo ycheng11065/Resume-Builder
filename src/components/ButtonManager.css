@@ -17,3 +17,8 @@
     width: 100%;
     height: 100%;
 }
+
+.Button-Manager-Root .Active-Button {
+    color: white;
+    background-color: #5062AA;
+}
