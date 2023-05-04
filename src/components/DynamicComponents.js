@@ -80,12 +80,12 @@ class DynamicComponents extends Component {
             <div className="Component-Input" key={itemId}>
               {this.renderInputs(itemId, inputValues, this.handleChange(itemId))}
               <button className="Component-Delete" onClick={() => this.handleDelete(itemId)}>
-                <AiOutlineClose size />
+                <AiOutlineClose className="Button-Icon"/>
               </button>
             </div>
           ))}
           <button className="Component-Add" onClick={this.addItem}>
-            <AiOutlinePlus size />  
+            <AiOutlinePlus className="Button-Icon"/>  
           </button>
         </div>
       </div>

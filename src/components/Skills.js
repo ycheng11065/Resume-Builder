@@ -116,7 +116,7 @@ class Skills extends Component {
           className="Skills-Delete-Category"
           onClick={() => this.handleDeleteCategory(category)}
         >
-          <AiOutlineClose size />
+          <AiOutlineClose className="Button-Icon"/>
         </button>
 
         <div className="Skills-Add">
@@ -132,7 +132,7 @@ class Skills extends Component {
             className="Skills-Skill-Add"
             onClick={() => this.addSkill(category)}
           >
-            <AiOutlinePlus size />
+            <AiOutlinePlus className="Button-Icon"/>
           </button>
         </div>
 
@@ -144,7 +144,7 @@ class Skills extends Component {
                 className="Skills-Delete-Skill"
                 onClick={() => this.handleDeleteSkill(category, skillId)}
               >
-                <AiOutlineClose size />
+                <AiOutlineClose className="Button-Icon"/>
               </button>
             </div>
           ))}
@@ -172,7 +172,7 @@ class Skills extends Component {
             className="Skills-Category-Add-Btn"
             onClick={this.addCategory}
           >
-            <AiOutlinePlus size />
+            <AiOutlinePlus className="Button-Icon"/>
           </button>
         </div>
         {this.renderInput(skills, inputValues)}
