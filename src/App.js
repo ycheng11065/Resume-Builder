@@ -10,6 +10,7 @@ import ResumePreview from "./components/ResumePreview";
 import ResumePDF from "./components/ResumePDF";
 import ButtonManager from "./components/ButtonManager";
 import myLogo from "./asset/logo/logo-yc.png";
+import { AiFillGithub } from "react-icons/ai";
 
 class App extends Component {
   constructor(props) {
@@ -284,6 +285,12 @@ class App extends Component {
               />
             )}
           </div>
+        </div>
+        <div className="App-Footer">
+          <p className="Github-Text">Build and designed by YCheng</p>
+          <a href="https://github.com/ycheng11065"> 
+              <AiFillGithub className="Github-Icon" />
+          </a>
         </div>
       </div>
     );

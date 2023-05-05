@@ -130,15 +130,33 @@ html {
 }
 
 .App-Input {
-    /* border: 2px solid red; */
     width: 100%;
     margin-bottom: 15rem; 
 }
 
-
-.App-Preview {
-    /* border: 2px solid red; */
+.App-Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
+
+.Github-Text {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.Github-Icon {
+    width: 3rem;
+    height: 3rem;
+    color: white;
+}
+
+
 
 /* Media Queries */
 
@@ -171,6 +189,7 @@ html {
     }
 
     .App-Content {
+        margin-top: 2rem;
         justify-content: center;
         gap: 2rem;
         max-width: 100%;
@@ -178,6 +197,7 @@ html {
     }
 
     .App-Input {
+        margin-top: 2rem;
         margin-bottom: 15rem;
     }
 }
@@ -214,6 +234,10 @@ html {
 
     .App-Input {
         max-width: 50rem;
+    }
+
+    .App-Footer {
+        padding-left: 5rem;
     }
 }
 
