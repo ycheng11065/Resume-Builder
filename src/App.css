@@ -171,6 +171,7 @@ html {
     }
 
     .App-Content {
+        margin-top: 2rem;
         justify-content: center;
         align-items: center;
         gap: 2rem;
@@ -179,7 +180,7 @@ html {
     }
 
     .App-Input {
-        margin-bottom: 15rem;
+        margin-bottom: 10rem;
     }
 }
 
@@ -198,7 +199,7 @@ html {
 
     .App-Input {
         margin-top: 2rem;
-        margin-bottom: 15rem;
+        margin-bottom: 10rem;
     }
 }
 

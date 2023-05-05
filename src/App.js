@@ -288,7 +288,8 @@ class App extends Component {
         </div>
         <div className="App-Footer">
           <p className="Github-Text">Build and designed by YCheng</p>
-          <a href="https://github.com/ycheng11065"> 
+          {/* eslint-disable-next-line */}
+          <a href="https://github.com/ycheng11065" target="_blank" rel="noopener"> 
               <AiFillGithub className="Github-Icon" />
           </a>
         </div>
