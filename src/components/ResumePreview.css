@@ -22,7 +22,7 @@ pre {
 .Resume-Preview {
     background-color: #F2EECB;  
     width: var(--resume-preview-width);
-    padding-bottom: calc(var(--resume-preview-width) * 1.294);
+    height: calc(var(--resume-preview-width) * 1.34);
     position: relative;
 }
 
@@ -141,5 +141,19 @@ pre {
     .Resume-Preview {
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    
+    .Resume-Preview {
+        padding-bottom: calc(var(--resume-preview-width) * 1.33); 
+    }
+}
+
+@media (min-width: 2560px) {
+    
+    .Resume-Preview {
+        padding-bottom: calc(var(--resume-preview-width) * 1.35); 
     }
 }
