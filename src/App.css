@@ -87,18 +87,10 @@ html {
     margin-bottom: 2rem;
     background-color: #5062AA;
     height: 8rem;
-    /* max-height: 10rem; */
 }
 
 .App-Name {
-    /* border: 2px solid red; */
-    /* font-size: 4rem; */
-    /* color: white; */
-    /* font-weight: 800; */
-    /* width: 2rem; */
     height: 5rem;
-    /* margin-top: 2rem; */
-    /* margin-bottom: 2rem; */
     margin-left: 2rem;
 }
 
@@ -138,8 +130,14 @@ html {
 }
 
 .App-Input {
+    /* border: 2px solid red; */
     width: 100%;
     margin-bottom: 15rem; 
+}
+
+
+.App-Preview {
+    /* border: 2px solid red; */
 }
 
 /* Media Queries */
@@ -189,6 +187,10 @@ html {
 }
 
 @media (min-width: 577px) {
+    .App-Content {
+        padding-left: 4rem;
+    }
+
     .App-Preview {
         max-width: 50rem;
     }
@@ -214,5 +216,11 @@ html {
         gap: 2rem;
         max-width: 100%;
         flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 18px;
     }
 }

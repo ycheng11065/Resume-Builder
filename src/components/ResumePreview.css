@@ -137,8 +137,8 @@ pre {
 } 
 
 @media (min-width: 577px) {
+
     .Resume-Preview {
-        margin-left: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
