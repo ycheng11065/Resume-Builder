@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import ResumePreview from "./components/ResumePreview";
 import ResumePDF from "./components/ResumePDF";
 import ButtonManager from "./components/ButtonManager";
+import myLogo from "./asset/logo/logo-yc.png";
 
 class App extends Component {
   constructor(props) {
@@ -211,7 +212,7 @@ class App extends Component {
     return (
       <div className="App-Root">
         <div className="App-Header">
-          <h1 className="App-Name">Resume Builder</h1>
+          <img className="App-Name" src={myLogo} alt="Resume Builder"/>
           <div className="App-Utility">
             <button onClick={() => this.reset()}>Reset</button>
             <button onClick={() => this.generateSample()}>
