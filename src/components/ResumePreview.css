@@ -132,7 +132,7 @@ pre {
 
 @media (max-width: 414px) {
     .Resume-Preview {
-        padding-bottom: calc(var(--resume-preview-width) * 1.3); 
+        padding-bottom: calc(var(--resume-preview-width) * 1.45); 
     }
 } 
 
