@@ -166,10 +166,6 @@ html {
 }
 
 @media (min-width: 368px) and (max-width: 576px) {
-    .App-Root {
-        overflow: auto;
-    }
-
     .App-Header {
         justify-content: space-between;
     }
@@ -183,6 +179,27 @@ html {
 
     .App-Input {
         margin-bottom: 15rem;
+    }
+}
+
+@media (max-width: 517px) {
+    .App-Header {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        height: 14rem;
+    }
+
+    .App-Name {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .App-Utility {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        padding-bottom: 1rem;
     }
 }
 
