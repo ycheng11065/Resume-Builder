@@ -25,25 +25,29 @@ class App extends Component {
       projectsView: false,
       skillsView: false,
       workExperienceView: false,
+      resetPressed: false,
     };
   }
 
   reset = () => {
-    this.setState(
-      {
-        personalInfo: {},
-        education: {},
-        projects: {},
-        skills: {},
-        workExperience: {},
-        personalInfoView: true,
-        educationView: false,
-        projectsView: false,
-        skillsView: false,
-        workExperienceView: false,
-      }
-    );
-  }
+    this.setState({
+      personalInfo: {},
+      education: {},
+      projects: {},
+      skills: {},
+      workExperience: {},
+      personalInfoView: true,
+      educationView: false,
+      projectsView: false,
+      skillsView: false,
+      workExperienceView: false,
+      resetPressed: true,
+    });
+  };
+
+  registeredReset = () => {
+    this.setState({ resetPressed: false });
+  };
 
   generateSample = () => {
     const educationId = uuidv4();
@@ -190,7 +194,7 @@ class App extends Component {
   updateStates = (newData, component) => {
     this.setState({
       [component]: newData,
-    }); 
+    });
   };
 
   handleButtonClick = (buttonType) => {
@@ -210,7 +214,9 @@ class App extends Component {
           <h1 className="App-Name">Resume Builder</h1>
           <div className="App-Utility">
             <button onClick={() => this.reset()}>Reset</button>
-            <button onClick={() => this.generateSample()}>Generate Sample</button>
+            <button onClick={() => this.generateSample()}>
+              Generate Sample
+            </button>
             <div>
               <ResumePDF
                 personalInfo={this.state.personalInfo}
@@ -233,7 +239,11 @@ class App extends Component {
             />
           </div>
           <div className="App-Input">
-            <ButtonManager onButtonClick={this.handleButtonClick} />
+            <ButtonManager
+              resetStatus={this.state.resetPressed}
+              resetCallback={this.registeredReset}
+              onButtonClick={this.handleButtonClick}
+            />
             {this.state.personalInfoView && (
               <PersonalInfo
                 onUpdate={(newData) =>

@@ -16,23 +16,15 @@
     width: 100%;
     box-sizing: border-box;
     padding-left: 1rem;
+    border-radius: 7px;
 }
 
-.Row1,
-.Row2 {
+.Row1{
     display: flex;
-    gap: 2rem;
-}
-
-.Row1 > input,
-.Row2 > input {
-    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .Row2 {
-    margin-top: 1rem;
-}
-
-.Row3 {
     margin-top: 1rem;
 }
