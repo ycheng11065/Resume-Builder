@@ -23,7 +23,6 @@ export const styles = StyleSheet.create({
     },
     h4: {
         fontSize: "11pt",
-        fontWeight: "bold",
     },
     p: {
         fontSize: "11pt",
@@ -64,6 +63,9 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
     },
+    educationInfo: {
+        fontWeight: "bold",
+    },
     workExperience: {
         position: "relative",
     },
@@ -78,10 +80,11 @@ export const styles = StyleSheet.create({
     workPosition: {
         width: "auto",
         height: "auto",
+        fontWeight: "bold",
     },
     workDate: {
         textAlign: "right",
-    },
+    },  
     workLocation: {
         textAlign: "right",
     },
@@ -89,8 +92,11 @@ export const styles = StyleSheet.create({
         marginTop: "2pt",
         marginLeft: "12pt",
     },
+    technicalProjects: {
+        marginTop: "8pt",
+    },
     projectSection: {
-        marginTop: "3pt",
+        marginTop: "2pt",
     },
     projectHeader: {
         display: "flex",
@@ -98,6 +104,7 @@ export const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     projectTitle: {
+        fontWeight: "bold",
         display: "flex",
         flexDirection: "row",
     },
@@ -110,6 +117,7 @@ export const styles = StyleSheet.create({
         marginLeft: "10pt",
     },
     skillSection: {
+        fontWeight: "bold",
         display: "flex",
         flexDirection: "row",
         marginTop: "4pt",

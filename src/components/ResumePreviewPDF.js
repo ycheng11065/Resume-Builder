@@ -38,7 +38,7 @@ class ResumePreviewPDF extends Component {
                 {Object.entries(education.inputValues).map(
                   ([school, schoolInfo]) => (
                     <View style={styles.educationSection} key={school}>
-                      <Text style={styles.h4}>
+                      <Text style={{ ...styles.educationInfo, ...styles.h4 }}>
                         {schoolInfo.schoolName}, {schoolInfo.degree}
                       </Text>
                       <Text style={styles.h4}>
@@ -84,7 +84,7 @@ class ResumePreviewPDF extends Component {
           {Object.keys(projects).length > 0 &&
             Object.keys(projects.inputValues).length > 0 &&
             projects.items.length > 0 && (
-              <View style={styles.TechnicalProjects}>
+              <View style={styles.technicalProjects}>
                 <Text style={{ ...styles.sectionTitle, ...styles.h3 }}>TECHNICAL PROJECTS</Text>
                 {Object.entries(projects.inputValues).map(
                   ([projectId, projectInfo]) => (

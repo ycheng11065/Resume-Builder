@@ -135,10 +135,6 @@ html {
     margin-bottom: 15rem; 
 }
 
-.App-Preview {
-    /* border: 2px solid red; */
-}
-
 .App-Footer {
     display: flex;
     justify-content: center;

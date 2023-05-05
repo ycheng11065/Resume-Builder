@@ -86,7 +86,12 @@ pre {
     text-align: right;
 }
 
+.Work-Company {
+    font-weight: 400;
+}
+
 .Work-Location {
+    font-weight: 400;
     text-align: right;
 }
 
@@ -96,7 +101,7 @@ pre {
 }
 
 .Technical-Projects {
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
 }
 
 .Project-Section {
@@ -119,6 +124,10 @@ pre {
 .Project-Description {
     margin-bottom: 0.4rem;
     margin-left: 0.9rem; 
+}
+
+.Technical-Skills {
+    margin-top: 0.8rem;
 }
 
 .Skill-Section {

@@ -8,7 +8,7 @@ import CMUNorm from "../asset/fonts/cmunorm.ttf";
 Font.register({
   family: "CMU",
   fonts: [
-    { src: CMUNorm },
+    { src: CMUNorm, fontWeight: 400},
     { src: CMUBold, fontWeight: "bold" },
     { src: CMUItalic, fontStyle: "italic" },
   ],
