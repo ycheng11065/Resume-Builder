@@ -188,7 +188,7 @@ html {
 
 @media (min-width: 577px) {
     .App-Content {
-        padding-left: 4rem;
+        padding-left: 5rem;
     }
 
     .App-Preview {
@@ -200,7 +200,6 @@ html {
     }
 }
 
-/* test */
 @media (min-width: 577px) and (max-width: 644px) {
     .App-Root {
         overflow: auto;
