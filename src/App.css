@@ -45,7 +45,7 @@ html {
 }
 
 :root {
-    --resume-preview-width: 50rem;
+    --resume-preview-width: 55rem;
     --dark-background-color: #292b2c;
     --dark-highlight-color: grey;
     --dark-font-color: white;
@@ -130,8 +130,13 @@ html {
 }
 
 .App-Input {
+    /* border: 2px solid red; */
     width: 100%;
     margin-bottom: 15rem; 
+}
+
+.App-Preview {
+    /* border: 2px solid red; */
 }
 
 .App-Footer {
@@ -226,7 +231,7 @@ html {
 
 @media (min-width: 577px) {
     .App-Content {
-        padding-left: 5rem;
+        padding-left: 4rem;
     }
 
     .App-Preview {
@@ -234,6 +239,7 @@ html {
     }
 
     .App-Input {
+        margin-left: 5rem;
         max-width: 50rem;
     }
 
